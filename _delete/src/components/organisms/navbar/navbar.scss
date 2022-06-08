@@ -1,0 +1,37 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  // padding: 1rem;
+  .menubar {
+    display: none;
+  }
+
+  @include small-devices {
+    flex-direction: row;
+    .menubar {
+      display: flex;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+.navbar-slide {
+  position: fixed;
+  right: -100%;
+  min-width: 200px;
+  height: 100%;
+  padding: 1rem 0;
+  background-color: rgba($gray-light, 0.25);
+  transition: 0.3s;
+  z-index: 10;
+  @include small-devices {
+    display: none;
+  }
+  &.active {
+    right: 0;
+  }
+}

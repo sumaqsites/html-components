@@ -1,0 +1,5 @@
+context:
+  image:
+    name: samples/ecommerce/analog-classic
+    description: Image from cloudinary samples
+

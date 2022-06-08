@@ -1,0 +1,13 @@
+context:
+  language:
+    title: Change language
+    items:
+      - name: EN
+        link: '#'
+        aria: page
+      - name: ES
+        link: '#'
+        aria: page
+      - name: DE
+        link: '#'
+        aria: page

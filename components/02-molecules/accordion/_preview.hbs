@@ -1,0 +1,17 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Preview</title>
+    <link rel="stylesheet" href="{{path '/styles/fractal-preview.css'}}">
+  </head>
+  <body>
+    {{{yield}}}
+    <script src="{{path '/scripts/lazysizes.js'}}"></script>
+    <script type="module">
+      import initAccordion from '{{path '/scripts/accordion.js'}}';
+      initAccordion()
+    </script>
+  </body>
+</html>

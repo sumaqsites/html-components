@@ -1,0 +1,9 @@
+{{#if wordcloud }}
+<ul class="wordcloud">
+  {{#each wordcloud.items}}
+  <li class="item value-{{ value }}" title="{{ description }}">{{ name }}</li>
+  {{/each}}
+</ul>
+{{else}}
+  {{> @data-not-found data='wordcloud'}}
+{{/if}}

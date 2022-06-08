@@ -1,0 +1,10 @@
+{{#if sectionImage }}
+  {{#with sectionImage}}
+    <section id="id" class="section-image">
+      <h2 class="title">{{ title }}</h2>
+      {{>image type="responsive" }}
+    </section>
+  {{/with}}
+{{else}}
+  {{>dataNotFound data='sectionImage'}}
+{{/if}}

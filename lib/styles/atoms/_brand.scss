@@ -1,0 +1,19 @@
+.brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+  span {
+    font-size: $font-size-4;
+    opacity: 0.8;
+  }
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+}

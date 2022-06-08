@@ -1,0 +1,12 @@
+title: Accordion
+context:
+  accordion:
+    id: accordion
+    title: This is a simple accordion
+    subtitle: Here a small description
+    toggleLabel: More details...
+    closeLabel: close
+    image:
+        name: samples/ecommerce/analog-classic
+        description: Lorem ipsum
+    content: '<h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'

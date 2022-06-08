@@ -1,0 +1,5 @@
+context:
+  sectionContent:
+    id: section-content-01
+    title: This is a title
+    content: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum deserunt aperiam, culpa possimus nemo asperiores itaque fugit doloribus voluptas enim. Illum sit id facere unde! Sed iste fugiat assumenda!</p>'

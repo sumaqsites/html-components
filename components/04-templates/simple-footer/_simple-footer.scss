@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 2rem;
+  background: $black;
+  color: $white;
+  p {
+    margin: 0.25rem 0;
+  }
+  a {
+    color: $white;
+  }
+  @include small-devices {
+  }
+}

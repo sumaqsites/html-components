@@ -1,0 +1,15 @@
+{{#if socialNetworks}}
+  <div class="social-networks">
+    <ul>
+      {{#each socialNetworks.items}}
+        <li class="item">
+          <a href="{{ link }}" title="{{ name }}">
+            <span>{{ name }}</span>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{else}}
+  {{> @data-not-found data='socialNetworks'}}
+{{/if}}

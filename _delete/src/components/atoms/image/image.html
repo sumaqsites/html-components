@@ -1,0 +1,13 @@
+{{#if image }}
+  {{#if (isBase type) }}
+    {{>imageBase}}
+  {{/if}}
+  {{#if (isSimple type) }}
+    {{>imageSimple}}
+  {{/if}}
+  {{#if (isResponsive type) }}
+    {{>imageResponsive}}
+  {{/if}}
+{{else }}
+  {{>dataNotFound data='image'}}
+{{/if }}

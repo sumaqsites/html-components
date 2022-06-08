@@ -1,0 +1,36 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+
+  @include small-devices {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @include large-devices {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  @include wide-devices {
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  }
+  .item {
+    position: relative;
+    height: 400px;
+    transition: all 0.3s ease-out 0s;
+    &:hover {
+      box-shadow: 0 0 1rem 0 $gray;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.75);
+      color: $white;
+      .name {
+        color: $primary;
+        font-size: $font-size-4;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

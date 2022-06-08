@@ -1,0 +1,7 @@
+context:
+  menuIcon:
+    name: Lorem Ipsum
+    link: '#'
+    image:
+        name: assets/sumaq-logo-dark
+        description: Lorem Impsum Logo

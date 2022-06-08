@@ -1,0 +1,14 @@
+{{#with address}}
+  <address class="address">
+    <h6 class="name">{{name}}</h6>
+    <p class="line">{{street}}</p>
+    <p class="line">{{zip}} {{city}}</p>
+    {{#if country}}<p class="line">{{country}}</p>{{/if}}
+    {{#each phone}}
+      <a class="phone" href="tel:{{this}}">{{this}}</a>
+    {{/each}}
+    <a class="email" href="mailto:{{email}}">{{email}}</a>
+  </address>
+{{else}}
+  {{> @data-not-found data='address'}}
+{{/with}}

@@ -1,0 +1,13 @@
+{{#with brand}}
+  {{#if image}}
+    <a class="brand" href="{{ link }}">
+      <img src="{{source image.name}}" alt="{{image.description}}" />
+    </a>
+  {{else}}
+    <a class="brand" href="{{ link }}">
+      <span>{{name}}</span>
+    </a>
+  {{/if}}
+{{else}}
+  {{> @data-not-found data='brand'}}
+{{/with}}

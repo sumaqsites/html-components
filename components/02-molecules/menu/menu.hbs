@@ -1,0 +1,13 @@
+{{#with menu }}
+  <ul class="menu" role="navigation">
+    {{#each items}}
+      <li class="menu-item">
+        <a href="{{ link }}" title="{{ name }}">
+          <span>{{ name }}</span>
+        </a>
+      </li>
+    {{/each }}
+  </ul>
+{{else}}
+  {{> @data-not-found data='menu'}}
+{{/with}}

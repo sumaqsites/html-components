@@ -1,0 +1,10 @@
+{{#if sectionSkills }}
+  {{#with sectionSkills }}
+    <section class="section-skills">
+      <h2 class="title">{{ title }}</h2>
+      {{#if wordcloud }} {{>wordcloud  }} {{/if }}
+    </section>
+  {{/with }}
+{{else}}
+  {{>dataNotFound data='sectionSkills'}}
+{{/if}}

@@ -1,0 +1,28 @@
+context:
+  footer:
+    id: kontakt
+    address:
+      - name: bildraum Wien
+        street: Gurkgasse 43/2
+        zip: 1140
+        city: Wien
+        phone:
+          - +43 1 9236472
+          - +43 676 9487308
+        email: bw@bildraum.at
+      - name: bildraum Graz
+        street: Grabenstraße 11
+        zip: 8010
+        city: Graz
+        phone:
+          - +43 316 232230
+          - +43 664 2125820
+        email: bg@bildraum.at
+
+    author:
+      text: Made by
+      name: SUMAQ Websites
+      link: 'https://sumaqwebsites.com'
+    copyright:
+      year: ©2021
+      name: bildraum Büro für Mediengestaltung e.U.

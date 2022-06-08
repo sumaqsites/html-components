@@ -1,0 +1,16 @@
+{{#with footer}}
+  <footer id="{{id}}">
+    <div class="contact">
+      {{#with address}}
+        {{#each this}}
+          {{> @address address=this}}
+        {{/each}}
+      {{/with}}
+      <a class="impressum" href="/impressum">impressum</a>
+    </div>
+    {{> @copyright}}
+    {{> @author}}
+  </footer>
+{{else }}
+  {{> @data-not-found data='image'}}
+{{/with}}

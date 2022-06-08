@@ -1,0 +1,16 @@
+{{#if gallery }}
+  <div class="gallery">
+    {{#each gallery.items }}
+      <div class="item">
+        {{> @image-responsive}}
+        <div class="info">
+          <h4 class="name">{{ name }}</h4>
+          <p class="description">{{ description }}</p>
+        </div>
+      </div>
+    {{/each }}
+  </div>
+</div>
+{{else }}
+  {{> @data-not-found data='gallery'}}
+{{/if }}

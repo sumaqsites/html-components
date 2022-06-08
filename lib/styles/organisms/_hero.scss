@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  // padding-top: 25%;
+  @include small-devices {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, $black, $gray);
+    opacity: 0.75;
+    z-index: 2;
+  }
+
+  .content {
+    font-size: calc(1rem + 1vw);
+    // padding: 0 2rem;
+    color: $white;
+    z-index: 4;
+    .pretitle {
+      font-size: 1.25em;
+      margin-bottom: 0.25rem;
+    }
+    .title {
+      font-size: 2.5em;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      font-size: 1.25em;
+      margin-bottom: 0.25rem;
+    }
+    .typewriter {
+      font-size: 1.25em;
+      color: $primary;
+    }
+    @include small-devices {
+      justify-content: center;
+      // padding: 0 4rem;
+    }
+
+    .social-networks {
+      font-size: 1em;
+      margin-top: 2rem;
+      a {
+        color: $gray-light;
+      }
+
+      @include small-devices {
+        // margin-top: 4rem;
+      }
+    }
+  }
+}

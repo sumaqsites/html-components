@@ -1,0 +1,11 @@
+{{#with language }}
+  <ul class="language">
+    {{#each items }}
+      <li class="language-item">
+        <a href="{{ link }}" title="{{ name }}" aria-current="{{ aria }}">{{ name }}</a>
+      </li>
+    {{/each }}
+  </ul>
+{{else }}
+  {{> @data-not-found data='language'}}
+{{/with }}

@@ -1,0 +1,111 @@
+context:
+  wordcloud:
+    items:
+      - name: html
+        description: lorem ipsum
+        value: 10
+      - name: css
+        description: lorem ipsum
+        value: 10
+      - name: preprocessor
+        description: lorem ipsum
+        value: 4
+      - name: frameworks
+        description: lorem ipsum
+        value: 4
+      - name: javascript
+        description: lorem ipsum
+        value: 10
+      - name: vue
+        description: lorem ipsum
+        value: 8
+      - name: angular
+        description: lorem ipsum
+        value: 4
+      - name: node
+        description: lorem ipsum
+        value: 8
+      - name: axios
+        description: lorem ipsum
+        value: 2
+      - name: express
+        description: lorem ipsum
+        value: 10
+      - name: unit testing
+        description: lorem ipsum
+        value: 4
+      - name: websites
+        description: lorem ipsum
+        value: 10
+      - name: seo
+        description: lorem ipsum
+        value: 6
+      - name: responsive design
+        description: lorem ipsum
+        value: 10
+      - name: ui/ux
+        description: lorem ipsum
+        value: 8
+      - name: cloud computing
+        description: lorem ipsum
+        value: 6
+      - name: api rest
+        description: lorem ipsum
+        value: 10
+      - name: swagger
+        description: lorem ipsum
+        value: 2
+      - name: firebase
+        description: lorem ipsum
+        value: 6
+      - name: aws
+        description: lorem ipsum
+        value: 6
+      - name: netlify
+        description: lorem ipsum
+        value: 8
+      - name: cloudinary
+        description: lorem ipsum
+        value: 8
+      - name: heroku
+        description: lorem ipsum
+        value: 2
+      - name: ci/cd
+        description: lorem ipsum
+        value: 8
+      - name: security
+        description: lorem ipsum
+        value: 8
+      - name: authentication
+        description: lorem ipsum
+        value: 8
+      - name: databases
+        description: lorem ipsum
+        value: 4
+      - name: sql
+        description: lorem ipsum
+        value: 8
+      - name: no-sql
+        description: lorem ipsum
+        value: 8
+      - name: tools
+        description: lorem ipsum
+        value: 4
+      - name: npm
+        description: lorem ipsum
+        value: 6
+      - name: gulp
+        description: lorem ipsum
+        value: 2
+      - name: lint
+        description: lorem ipsum
+        value: 8
+      - name: git
+        description: lorem ipsum
+        value: 8
+      - name: docker
+        description: lorem ipsum
+        value: 6
+      - name: agile
+        description: lorem ipsum
+        value: 10

@@ -1,0 +1,26 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Preview</title>
+    <link rel='stylesheet' href='{{path '/styles/fractal-preview.css'}}' />
+  </head>
+  <body>
+    <main>
+      {{{yield}}}
+    </main>
+    <style>
+      {{!-- .section-image {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .section-image .image {
+        flex: 1;
+      } --}}
+    </style>
+    <script src='{{path '/scripts/lazysizes.js'}}'></script>
+  </body>
+</html>

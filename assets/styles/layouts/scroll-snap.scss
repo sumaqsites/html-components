@@ -1,0 +1,19 @@
+html {
+  scroll-snap-type: y proximity;
+}
+
+// nav {
+//   scroll-snap-align: none;
+// }
+
+header {
+  scroll-snap-align: start;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+footer {
+  scroll-snap-align: end;
+}

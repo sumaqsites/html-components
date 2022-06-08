@@ -1,0 +1,10 @@
+variants:
+  - name: default
+    label: Default Caret
+  - name: Caret
+    context:
+      typewriter:
+        caret: '|'
+context:
+  typewriter:
+    text: This is a typewriter

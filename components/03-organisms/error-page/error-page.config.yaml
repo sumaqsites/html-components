@@ -1,0 +1,11 @@
+context:
+  errorPage:
+    title: "We couldn't find that page"
+    text: "Looks like we couldn't find that page. Please try again or contact an administrator if the problem persists."
+    back:
+      text: Return to the homepage
+      link: /
+    image:
+      _type: simple
+      name: assets/sumaq-logo-dark
+      description: SUMAQ logo image

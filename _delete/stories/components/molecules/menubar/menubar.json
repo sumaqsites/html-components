@@ -1,0 +1,20 @@
+{
+  "title": "Menu",
+  "items": [
+    {
+      "name": "Home",
+      "link": "#",
+      "aria": "page"
+    },
+    {
+      "name": "Theme",
+      "link": "#",
+      "aria": "false"
+    },
+    {
+      "name": "Error page",
+      "link": "#",
+      "aria": "false"
+    }
+  ]
+}

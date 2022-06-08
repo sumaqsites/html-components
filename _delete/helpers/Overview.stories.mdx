@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Components/Helpers" />
+
+# Welcome to Helpers
+
+
+```html
+<!-- Esta es la cabecera requerida en todas las páginas. -->
+<head>
+  {%> meta %}
+  {%> ogp %}
+  {%> links %}
+</head>
+```
+
+
+```json
+# estos son los valores requeridos
+{
+  "meta": {
+    "title": "SUMAQ Website Starter",
+    "description": "This is a simple static websites generator with Gulp, Pug, Stylus, Yaml, BrowserSync, etc. for publish to S3.",
+    "keywords": "sumaq, static, websites, builder, generator, github, aws s3"
+  },
+  "ogp": {
+    "title": "SUMAQ Website",
+    "type": "",
+    "image": "https://sumaq.com/images/logo.png",
+    "url": "https://sumaq.com/",
+  }
+
+}
+```
+
+### Links
+- [The Open Graph protocol](https://ogp.me/)

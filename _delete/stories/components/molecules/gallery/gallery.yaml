@@ -1,0 +1,25 @@
+items:
+  - name: Nice item 1
+    description: Micro CMS - In progress
+    link: '#'
+    image:
+      description: Image from cloudinary samples
+      name: samples/food/spices
+  - name: Nice item 2
+    description: Guitarrist Website - In progress
+    link: '#'
+    image:
+      description: Image from cloudinary samples
+      name: samples/food/pot-mussels
+  - name: Nice item 3
+    description: Web Application
+    link: '#'
+    image:
+      description: Image from cloudinary samples
+      name: samples/food/fish-vegetables
+  - name: Nice item 4
+    description: Lorem ipsum
+    link: '#'
+    image:
+      description: Image from cloudinary samples
+      name: samples/food/dessert

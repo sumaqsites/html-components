@@ -1,0 +1,25 @@
+context:
+  hero:
+    pretitle: "Hello, I'm"
+    title: SUMAQ websites
+    subtitle: 'simple, minimalist y elegant!'
+    typewriter:
+      text: this is a typewriter
+    image:
+      name: samples/people/smiling-man
+      description: Image from cloudinary samples
+    socialNetworks:
+      title: Social networks
+      items:
+        - name: demo@sumaqwebsites.com
+          link: 'mailto:demo@sumaqwebsites.com'
+          icon: icon-email
+          abbr: demo@sumaqwebsites.com
+        - name: Github
+          link: 'https://github.com/sumaqwebsites'
+          icon: icon-github
+          abbr: github
+        - name: Website
+          link: 'https://sumaqwebsites.com'
+          icon: icon-web
+          abbr: web

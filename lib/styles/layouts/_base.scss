@@ -1,0 +1,26 @@
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  font-family: $font-family-primary;
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+// main {
+//   flex: 1 0 auto;
+// }
+
+.data-not-found {
+  font-size: $font-size-3;
+  background-color: $warning;
+  padding: 0.25rem 1rem;
+}

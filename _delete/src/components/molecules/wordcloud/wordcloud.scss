@@ -1,0 +1,35 @@
+@use "sass:math";
+
+@mixin value-n($size, $color) {
+  $val: (1 + math.div(($size), 10));
+  .value-#{$size} {
+    font-size: #{$val}em;
+    @if $size < 5 {
+      color: inherit;
+      font-weight: 200;
+    } @else if $size < 8 {
+      color: lighten($color, 15);
+      font-weight: 300;
+    } @else {
+      color: lighten($color, 5);
+      font-weight: 400;
+    }
+  }
+}
+
+
+.wordcloud {
+  // font-size: 62.5%;
+  font-size: calc(1rem + 1vw);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  .item {
+    margin: 0.1rem 0.5rem;
+    color: $black-alt;
+  }
+  @for $i from 0 through 12 {
+    @include value-n($i, $primary);
+  }
+}

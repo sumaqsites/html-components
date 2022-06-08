@@ -1,0 +1,23 @@
+{
+  "title": "Social networks",
+  "items": [
+    {
+      "name": "demo@sumaqwebsites.com",
+      "link": "mailto:demo@sumaqwebsites.com",
+      "image": "icon-email",
+      "abbr": "demo@sumaqwebsites.com"
+    },
+    {
+      "name": "Github",
+      "link": "https://github.com/sumaqwebsites",
+      "image": "icon-github",
+      "abbr": "github"
+    },
+    {
+      "name": "Website",
+      "link": "https://sumaqwebsites.com",
+      "image": "icon-web",
+      "abbr": "web"
+    }
+  ]
+}

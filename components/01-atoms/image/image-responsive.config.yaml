@@ -1,0 +1,5 @@
+context:
+  image:
+    name: samples/people/jazz
+    description: Image from cloudinary samples
+

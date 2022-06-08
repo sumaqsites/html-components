@@ -1,0 +1,40 @@
+footer {
+  background-color: $secondary;
+  color: $white;
+  padding: 4rem 2rem 2rem;
+  .contact {
+    margin-bottom: 4rem;
+  }
+  .address {
+    font-style: normal;
+    // font-weight: normal;
+    margin-bottom: 2rem;
+    .name {
+      font-size: $font-size-4;
+      font-weight: $weight-bold;
+    }
+    .email {
+      color: $primary;
+    }
+  }
+  .impressum {
+    color: $primary;
+  }
+  .copyright {
+    margin-bottom: 0.5rem;
+  }
+  .author {
+    opacity: 0.5;
+  }
+  @include small-devices {
+    text-align: center;
+
+    .contact {
+      display: flex;
+      justify-content: space-around;
+    }
+    .address {
+      margin-bottom: 0;
+    }
+  }
+}

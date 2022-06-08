@@ -1,0 +1,17 @@
+.section-image {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .heading {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    flex-grow: 1;
+  }
+  .title {
+    font-size: $font-size-2;
+  }
+}

@@ -1,0 +1,13 @@
+context:
+  navbar:
+    brand:
+      name: lorem ipsum
+      link: '#'
+    menu:
+      items:
+        - name: Home
+          link: '#'
+        - name: Theme
+          link: '#'
+        - name: Error page
+          link: '#'

@@ -1,0 +1,63 @@
+{
+  "_interval": 2500,
+  "name": "Carousel",
+  "id": "carousel",
+  "items": [
+    {
+      "caption": {
+        "pretitle": "pretitle 1",
+        "title": "Item 1",
+        "subtitle": "subtitle 1",
+        "description": "Lorem ipsum..."
+      },
+      "image": {
+        "name": "samples/people/bicycle",
+        "description": "Image from cloudinary samples"
+      }
+    },
+    {
+      "caption": {
+        "pretitle": "pretitle 2",
+        "title": "Item 2",
+        "description": "Lorem ipsum..."
+      },
+      "image": {
+        "name": "samples/people/jazz",
+        "description": "Image from cloudinary samples"
+      }
+    },
+    {
+      "image": {
+        "name": "samples/people/boy-snow-hoodie",
+        "description": "Image from cloudinary samples"
+      }
+    },
+    {
+      "caption": {
+        "title": "Item 4",
+        "subtitle": "subtitle 4",
+        "description": "Lorem ipsum..."
+      },
+      "image": {
+        "name": "samples/people/smiling-man",
+        "description": "Image from cloudinary samples"
+      }
+    },
+    {
+      "image": {
+        "name": "samples/people/kitchen-bar",
+        "description": "Image from cloudinary samples"
+      }
+    },
+    {
+      "caption": {
+        "title": "Item 6",
+        "description": "Lorem ipsum..."
+      },
+      "image": {
+        "name": "samples/bike",
+        "description": "Image from cloudinary samples"
+      }
+    }
+  ]
+}

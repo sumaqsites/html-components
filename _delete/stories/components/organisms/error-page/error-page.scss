@@ -1,0 +1,11 @@
+@import '@styles/base/variables';
+@import '@styles/base/responsive';
+@import '~atoms/image/image';
+@import '~organisms/error-page/error-page';
+
+.section-error-page {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}

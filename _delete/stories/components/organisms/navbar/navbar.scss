@@ -1,0 +1,9 @@
+@import '@styles/base/variables';
+@import '@styles/base/responsive';
+@import '~organisms/navbar/navbar';
+
+.block-navbar {
+  height: 4rem;
+  margin: 0;
+  padding: 0 1rem;
+}

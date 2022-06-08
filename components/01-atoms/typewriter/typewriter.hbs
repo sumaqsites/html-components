@@ -1,0 +1,5 @@
+{{#with typewriter}}
+  <p class="typewriter" data-text="{{ text }}" {{#if caret}}data-caret="{{caret}}"{{/if}}>{{ text }}</p>
+{{else}}
+  {{> @data-not-found data='typewriter'}}
+{{/with}}

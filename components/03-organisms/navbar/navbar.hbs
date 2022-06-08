@@ -1,0 +1,9 @@
+{{#with navbar}}
+  <nav class="navbar">
+    {{> @brand}}
+    {{> @menu}}
+    {{> @menu-icon}}
+  </nav>
+{{else }}
+  {{> @data-not-found data='navbar'}}
+{{/with }}

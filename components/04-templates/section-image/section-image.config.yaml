@@ -1,0 +1,7 @@
+context:
+  sectionImage:
+    id: section-01
+    title: This is a Image Section Title
+    image:
+        description: Image from cloudinary samples
+        name: samples/people/jazz

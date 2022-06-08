@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="{{path '/styles/fractal-preview.css'}}" />
+  </head>
+  <body>
+    {{{yield}}}
+    <header class="container full-height">
+      <h1>Header</h1>
+    </header>
+    <style>
+      nav {
+        height: 100px;
+        padding: 0 1rem;
+      }
+      .navbar .menu {
+        top: 100px;
+        bottom: 0;
+        background-color: white;
+      }
+    </style>
+    <script type="module">
+      import initNavbar from '{{path "/scripts/navbar.js"}}';
+      initNavbar();
+    </script>
+  </body>
+</html>

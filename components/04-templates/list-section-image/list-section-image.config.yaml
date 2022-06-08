@@ -1,0 +1,18 @@
+context:
+  sections:
+    items:
+      - title: 'Section 1'
+        id: section-01
+        image:
+          description: Image from cloudinary samples
+          name: samples/people/jazz
+      - title: 'Section 2'
+        id: section-02
+        image:
+          description: Image from cloudinary samples
+          name: samples/people/jazz
+      - title: 'Section 3'
+        id: section-03
+        image:
+          description: Image from cloudinary samples
+          name: samples/people/jazz

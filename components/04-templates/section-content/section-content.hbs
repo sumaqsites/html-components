@@ -1,0 +1,12 @@
+{{#with sectionContent }}
+  <section id="{{id}}" class="section-content">
+    <header class="heading">
+      <h2 class="title">{{ title }}</h2>
+    </header>
+    <div class="content">
+      {{{ content }}}
+    </div>
+  </section>
+{{else}}
+  {{> @data-not-found data='sectionContent'}}
+{{/with}}

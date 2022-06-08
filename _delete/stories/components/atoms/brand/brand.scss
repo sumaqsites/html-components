@@ -1,0 +1,9 @@
+@import '@styles/base/variables';
+@import '@styles/base/responsive';
+@import '~atoms/brand/brand';
+
+.nav-brand {
+  height: 10rem;
+  width: 10rem;
+  padding: 0;
+}

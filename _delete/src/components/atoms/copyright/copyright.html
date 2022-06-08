@@ -1,0 +1,14 @@
+{{#if copyright }}
+  {{#with copyright}}
+  <p class="copyright">
+    {{ year }}
+    {{#if link}}
+      <a target="_blank" href="{{ link }}">{{ name }}</a>
+    {{else}}
+      {{ name }}
+    {{/if}}
+  </p>
+  {{/with}}
+{{else}}
+  {{>dataNotFound data='copyright'}}
+{{/if}}
