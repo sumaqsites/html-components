@@ -9,23 +9,23 @@ const partials = require('./assets/scripts/partials')
 
 const packageInfo = require('./package.json')
 
-// const hbsAdapter = require('@frctl/handlebars')({
-//   helpers,
-//   partials
-// })
+const hbsAdapter = require('@frctl/handlebars')({
+  helpers,
+  partials
+})
 
 // Require the adapter factory:
 // Create the adapter instance:
 // Register the adapter as engine:
-const reactAdapter = require('@frctl/react')({
-  // renderMethod: 'renderToStaticMarkup',
-  // ssr:false,
-  // wrapperElements: 'div',
-  // babelOptions: {
-  //   presets: ['@babel/preset-react'],
-  //   extensions: ['.js', '.jsx']
-  // }
-})
+// const reactAdapter = require('@frctl/react')({
+//   // renderMethod: 'renderToStaticMarkup',
+//   // ssr:false,
+//   // wrapperElements: 'div',
+//   // babelOptions: {
+//   //   presets: ['@babel/preset-react'],
+//   //   extensions: ['.js', '.jsx']
+//   // }
+// })
 // const reactAdapter = createReactAdapter({/* options */});
 
 /*
@@ -46,13 +46,13 @@ fractal.components.set('default.status', 'wip')
 fractal.components.set('path', path.join(__dirname, 'src/components'))
 // fractal.components.engine(reactAdapter)
 // fractal.components.set('ext', '.jsx')
-// fractal.components.engine(hbsAdapter)
+fractal.components.engine(hbsAdapter)
 
 /*
  * Documentation.
  */
 fractal.docs.set('path', path.join(__dirname, 'src/docs'))
-// fractal.docs.engine(hbsAdapter)
+fractal.docs.engine(hbsAdapter)
 fractal.docs.set('ext', '.md')
 
 /**

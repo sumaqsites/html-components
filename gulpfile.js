@@ -13,7 +13,7 @@ const logger = fractal.cli.console
 
 const dir = {
   assets: path.join(__dirname, 'assets'),
-  components: path.join(__dirname, 'components'),
+  components: path.join(__dirname, 'src/components'),
   public: path.join(__dirname, 'public'),
   dist: path.join(__dirname, 'dist'),
   lib: path.join(__dirname, 'lib'),
