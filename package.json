@@ -5,14 +5,13 @@
     "name": "Sumaq sites",
     "email": "elingan@gmail.com"
   },
-  "main": "fractal.config.js",
   "version": "0.1.0",
   "files": [
     "lib/**/*"
   ],
   "scripts": {
     "start": "fractal start --sync",
-    "build": "fractal build",
+    "build": "gulp build",
     "test": "gulp test",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build"
