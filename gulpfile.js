@@ -140,7 +140,6 @@ function fractalScripts() {
     .pipe(dest(path.join(dir.public, 'scripts')))
 }
 
-
 function fractalStart() {
   watch(
     [
@@ -164,12 +163,11 @@ function fractalStart() {
 
   server.on('error', (err) => console.error(err))
 
-  return server.start().then(() => {
+  return server.start().then((data) => {
+    // console.log(data.address())
     const collection = fractal.components
-    console.log(collection.find('@navbar').handle)
-
-
-    logger.success('Fractal server is now running at http://localhost:3000.')
+    // console.log(collection.find('@navbar').handle)
+    logger.success(`Fractal server is now running at http://localhost:${data.address().port}`)
   })
 }
 
@@ -189,6 +187,7 @@ function fractalBuild() {
 const defaults = series(partials, parallel(fractalStyles, fractalScripts, copyModules), fractalStart)
 const build = series(parallel(fractalStyles, fractalScripts, copyModules, partials), fractalBuild)
 const buildLib = series(clean, parallel(copy, helpers, partials))
+
 module.exports = {
   'fractal:styles': fractalStyles,
   'fractal:scripts': fractalScripts,

@@ -1,17 +1,17 @@
 function blured(name) {
-  return `https://res.cloudinary.com/sumaqwebsites/image/upload/c_fill,w_480/e_blur:2000/${name}`
+  return `https://res.cloudinary.com/sumaqsites/image/upload/c_fill,w_480/e_blur:2000/${name}`
 }
 
 function source(name) {
-  return `https://res.cloudinary.com/sumaqwebsites/image/upload/${name}`
+  return `https://res.cloudinary.com/sumaqsites/image/upload/${name}`
 }
 
 function sourceSet(name) {
   return `
-    https://res.cloudinary.com/sumaqwebsites/image/upload/c_fill,w_480/${name} 480w,
-    https://res.cloudinary.com/sumaqwebsites/image/upload/c_fill,w_920/${name} 920w,
-    https://res.cloudinary.com/sumaqwebsites/image/upload/c_fill,w_1200/${name} 1200w,
-    https://res.cloudinary.com/sumaqwebsites/image/upload/c_fill,w_1920/${name} 1920w
+    https://res.cloudinary.com/sumaqsites/image/upload/c_fill,w_480/${name} 480w,
+    https://res.cloudinary.com/sumaqsites/image/upload/c_fill,w_920/${name} 920w,
+    https://res.cloudinary.com/sumaqsites/image/upload/c_fill,w_1200/${name} 1200w,
+    https://res.cloudinary.com/sumaqsites/image/upload/c_fill,w_1920/${name} 1920w
     `
 }
 

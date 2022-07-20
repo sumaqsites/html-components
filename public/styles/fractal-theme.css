@@ -47,8 +47,8 @@ body {
 
 .Header {
   min-height: 60px;
-  background: #db3862;
-  background: linear-gradient(90deg, #db3862 25%, #f86460 100%);
+  background: rgb(219, 56, 98);
+  background: linear-gradient(90deg, rgb(219, 56, 98) 25%, rgb(248, 100, 96) 100%);
 }
 
 .Frame-body {

@@ -1,13 +1,21 @@
 {
-  "name": "@sumaq/html-components",
+  "name": "@sumaqsites/html-components",
+  "description": "",
+  "author": {
+    "name": "Sumaq sites",
+    "email": "elingan@gmail.com"
+  },
+  "main": "fractal.config.js",
   "version": "0.1.0",
   "files": [
     "lib/**/*"
   ],
   "scripts": {
-    "start": "gulp serve",
-    "build": "gulp build",
-    "test": "gulp test"
+    "start": "fractal start --sync",
+    "build": "fractal build",
+    "test": "gulp test",
+    "fractal:start": "fractal start --sync",
+    "fractal:build": "fractal build"
   },
   "dependencies": {
     "lazysizes": "^5.3.2"
@@ -15,9 +23,11 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
+    "@faker-js/faker": "^7.3.0",
     "@frctl/fractal": "^1.5.11",
     "@frctl/handlebars": "^1.2.13",
     "@frctl/mandelbrot": "^1.9.4",
+    "@frctl/react": "^0.3.6",
     "camelcase": "^6.2.0",
     "fast-glob": "^3.2.7",
     "gulp": "^4.0.2",

@@ -1,0 +1,16 @@
+context:
+  socialNetworks:
+    title: Social networks
+    items:
+      - name: demo@sumaqsites.com
+        link: 'mailto:demo@sumaqsites.com'
+        image: icon-email
+        abbr: demo@sumaqsites.com
+      - name: Github
+        link: 'https://github.com/sumaqsites'
+        image: icon-github
+        abbr: github
+      - name: Website
+        link: 'https://sumaqsites.com'
+        image: icon-web
+        abbr: web

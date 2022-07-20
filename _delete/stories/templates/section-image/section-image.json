@@ -1,7 +1,0 @@
-{
-  "title": "This is a Image Section Title",
-  "image": {
-    "description": "Image from cloudinary samples",
-    "name": "samples/people/jazz"
-  }
-}

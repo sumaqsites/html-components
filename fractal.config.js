@@ -3,21 +3,37 @@
 const path = require('path')
 const fractal = require('@frctl/fractal').create()
 const mandelbrot = require('@frctl/mandelbrot')
-const packageInfo = require('./package.json')
+
 const helpers = require('./assets/scripts/helpers')
 const partials = require('./assets/scripts/partials')
 
-const hbs = require('@frctl/handlebars')({
-  helpers,
-  partials
+const packageInfo = require('./package.json')
+
+// const hbsAdapter = require('@frctl/handlebars')({
+//   helpers,
+//   partials
+// })
+
+// Require the adapter factory:
+// Create the adapter instance:
+// Register the adapter as engine:
+const reactAdapter = require('@frctl/react')({
+  // renderMethod: 'renderToStaticMarkup',
+  // ssr:false,
+  // wrapperElements: 'div',
+  // babelOptions: {
+  //   presets: ['@babel/preset-react'],
+  //   extensions: ['.js', '.jsx']
+  // }
 })
+// const reactAdapter = createReactAdapter({/* options */});
 
 /*
  * Project
  */
-fractal.set('project.title', 'SUMAQ HTML Components')
+fractal.set('project.title', 'Sumaq Sites Html Components Library')
 fractal.set('project.version', packageInfo.version)
-fractal.set('project.author', 'SUMAQ Websites')
+fractal.set('project.author', packageInfo.author.name)
 
 /*
  * Defaults
@@ -27,14 +43,41 @@ fractal.components.set('default.status', 'wip')
 /*
  * Components.
  */
-fractal.components.set('path', path.join(__dirname, 'components'))
-fractal.components.engine(hbs)
+fractal.components.set('path', path.join(__dirname, 'src/components'))
+// fractal.components.engine(reactAdapter)
+// fractal.components.set('ext', '.jsx')
+// fractal.components.engine(hbsAdapter)
 
 /*
  * Documentation.
  */
-fractal.docs.set('path', path.join(__dirname, 'docs'))
-fractal.docs.engine(hbs)
+fractal.docs.set('path', path.join(__dirname, 'src/docs'))
+// fractal.docs.engine(hbsAdapter)
+fractal.docs.set('ext', '.md')
+
+/**
+ * Build
+ */
+fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
+
+/**
+ * Custom commands
+ */
+function listComponents(args, done) {
+  const app = this.fractal
+  for (let item of app.components.flatten()) {
+    this.log(`${item.handle} - ${item.status.label}`)
+  }
+  done()
+}
+
+fractal.cli.command('build-all', require('./tasks/buildAll'), {
+  description: 'List all available components'
+})
+
+fractal.cli.command('list', listComponents, {
+  desc: 'List all available components'
+})
 
 /*
  * Web UI.
@@ -42,9 +85,9 @@ fractal.docs.engine(hbs)
 fractal.web.set('static.path', path.join(__dirname, 'public'))
 
 // Theme https://fractal.build/guide/web/default-theme.html#configuration
-const sumaqTheme = mandelbrot({
+const sumaqsitesTheme = mandelbrot({
   // skin: {
-  //   name: 'sumaq',
+  //   name: 'sumaqsites',
   //   accent: '#ff0000',
   //   complement: '#00ff00',
   //   links: '#ff0000'
@@ -56,11 +99,11 @@ const sumaqTheme = mandelbrot({
   // scripts: ['default', '/js/version-switch.js'],
   favicon: '/theme/favicon.ico',
   information: [
-    { label: 'Version', value: require('./package.json').version },
-    // { label: 'Website', value: 'https://www.sumaqwebsites.com' },
+    { label: 'Version', value: packageInfo.version },
+    // { label: 'Website', value: 'https://www.sumaqsites.com' },
     // { label: 'GitHub', value: '' },
     // { label: 'Twitter', value: '' },
-    // { label: 'Email', value: 'hello@sumaqwebsites.com' },
+    // { label: 'Email', value: 'hello@sumaqsites.com' },
     {
       label: 'Built on',
       value: new Date(),
@@ -72,32 +115,7 @@ const sumaqTheme = mandelbrot({
     { label: 'Author', value: 'SUMAQ websites' }
   ]
 })
-sumaqTheme.addLoadPath(__dirname + '/fractal/theme-overrides')
-fractal.web.theme(sumaqTheme)
-
-/**
- * Build
- */
-fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
-
-/**
- * Custom commands
- */
-function listComponents (args, done) {
-  const app = this.fractal
-  for (let item of app.components.flatten()) {
-    this.log(`${item.handle} - ${item.status.label}`);
-  }
-  done()
-}
-
-fractal.cli.command('build-all', require('./tasks/buildAll'), {
-  description: 'List all available components'
-})
-
-
-fractal.cli.command('list', listComponents, {
-  desc: 'List all available components'
-})
+sumaqsitesTheme.addLoadPath(__dirname + '/fractal/theme-overrides')
+fractal.web.theme(sumaqsitesTheme)
 
 module.exports = fractal
