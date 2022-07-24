@@ -7,26 +7,16 @@ const mandelbrot = require('@frctl/mandelbrot')
 const helpers = require('./assets/scripts/helpers')
 const partials = require('./assets/scripts/partials')
 
+// Handlebars helpers
+helpers.exists = require('./src/helpers/exists')
+helpers.imageSource = require('./src/helpers/imageSource')
+
 const packageInfo = require('./package.json')
 
 const hbsAdapter = require('@frctl/handlebars')({
   helpers,
   partials
 })
-
-// Require the adapter factory:
-// Create the adapter instance:
-// Register the adapter as engine:
-// const reactAdapter = require('@frctl/react')({
-//   // renderMethod: 'renderToStaticMarkup',
-//   // ssr:false,
-//   // wrapperElements: 'div',
-//   // babelOptions: {
-//   //   presets: ['@babel/preset-react'],
-//   //   extensions: ['.js', '.jsx']
-//   // }
-// })
-// const reactAdapter = createReactAdapter({/* options */});
 
 /*
  * Project
@@ -39,13 +29,16 @@ fractal.set('project.author', packageInfo.author.name)
  * Defaults
  */
 fractal.components.set('default.status', 'wip')
+fractal.components.set('default.context', {
+  cloudinary: { link: 'https://res.cloudinary.com/sumaqsites/image/upload' }
+})
 
 /*
  * Components.
  */
 fractal.components.set('path', path.join(__dirname, 'src/components'))
 // fractal.components.engine(reactAdapter)
-// fractal.components.set('ext', '.jsx')
+fractal.components.set('ext', '.hbs')
 fractal.components.engine(hbsAdapter)
 
 /*
@@ -55,12 +48,12 @@ fractal.docs.set('path', path.join(__dirname, 'src/docs'))
 fractal.docs.engine(hbsAdapter)
 fractal.docs.set('ext', '.md')
 
-/**
+/*
  * Build
  */
 fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
 
-/**
+/*
  * Custom commands
  */
 function listComponents(args, done) {

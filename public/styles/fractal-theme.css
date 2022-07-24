@@ -140,3 +140,7 @@ body {
   background: none;
   padding-top: 2rem;
 }
+
+.Code pre .hljs-tag:first-child {
+  margin-left: 15px;
+}

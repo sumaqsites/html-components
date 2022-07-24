@@ -5,5 +5,13 @@ module.exports = {
   tabWidth: 2,
   semi: false,
   singleQuote: true,
-  SpaceBeforeFunctionParen: true
+  SpaceBeforeFunctionParen: true,
+  overrides: [
+    {
+      files: '*.hbs',
+      options: {
+        singleQuote: false
+      }
+    }
+  ]
 }

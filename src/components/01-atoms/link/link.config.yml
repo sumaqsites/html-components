@@ -1,0 +1,5 @@
+context:
+  link:
+    target: '_blank'
+    href: 'https://www.google.com'
+    text: Link component

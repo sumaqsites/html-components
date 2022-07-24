@@ -1,5 +1,0 @@
-context:
-  image:
-    name: samples/people/smiling-man
-    description: Image from cloudinary samples
-

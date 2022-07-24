@@ -14,15 +14,12 @@
     "build": "gulp build",
     "test": "gulp test",
     "fractal:start": "fractal start --sync",
-    "fractal:build": "fractal build"
-  },
-  "dependencies": {
-    "lazysizes": "^5.3.2"
+    "fractal:build": "fractal build",
+    "buildLib": "fractal buildLib"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
-    "@faker-js/faker": "^7.3.0",
     "@frctl/fractal": "^1.5.11",
     "@frctl/handlebars": "^1.2.13",
     "@frctl/mandelbrot": "^1.9.4",
@@ -34,6 +31,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.1.0",
+    "lazysizes": "^5.3.2",
     "sass": "^1.43.4"
   }
 }
