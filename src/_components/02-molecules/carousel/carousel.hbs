@@ -1,19 +1,19 @@
 {{#if carousel}}
-  {{#with carousel}}
+  {{#exists carousel}}
     <div id="{{id}}" class="carousel" data-interval="{{_interval}}">
       <!-- Slides -->
       <div class="items">
         {{#each items}}
           <div class="item {{#if @first}}active{{/if}}">
             {{> @image-responsive}}
-            {{#with caption}}
+            {{#exists caption}}
               <div class="caption">
                 {{#if pretitle}}<p class="pretitle">{{pretitle}}</p>{{/if}}
                 <h2 class="title">{{title}}</h2>
                 {{#if subtitle}}<h3 class="subtitle">{{subtitle}}</h3>{{/if}}
                 <p  class="description">{{description}}</p>
               </div>
-            {{/with}}
+            {{/exists}}
           </div>
         {{/each}}
       </div>
@@ -60,7 +60,7 @@
       </div>
 
     </div>
-  {{/with}}
+  {{/exists}}
 {{else}}
   {{> @data-not-found data='carousel'}}
 {{/if}}

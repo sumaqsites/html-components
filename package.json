@@ -15,7 +15,8 @@
     "test": "gulp test",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build",
-    "buildLib": "fractal buildLib"
+    "build:lib": "fractal build-lib",
+    "build:list": "fractal list-components"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

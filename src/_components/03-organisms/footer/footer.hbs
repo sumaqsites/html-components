@@ -1,8 +1,8 @@
-{{#with footer}}
+{{#exists footer}}
   <footer class="footer">
     {{> @copyright}}
     {{> @author}}
   </footer>
 {{else }}
   {{> @data-not-found data='footer'}}
-{{/with }}
+{{/exists }}

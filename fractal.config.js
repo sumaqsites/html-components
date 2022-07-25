@@ -1,5 +1,6 @@
 'use strict'
 
+const fs = require('fs')
 const path = require('path')
 const fractal = require('@frctl/fractal').create()
 const mandelbrot = require('@frctl/mandelbrot')
@@ -56,21 +57,54 @@ fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
 /*
  * Custom commands
  */
-function listComponents(args, done) {
-  const app = this.fractal
-  for (let item of app.components.flatten()) {
-    this.log(`${item.handle} - ${item.status.label}`)
+const _config = {
+  desc: 'List all available components'
+}
+function _buildLib(args, done) {
+  // Copy components
+  const dirComponentsLib = path.join(__dirname, 'lib/components')
+  if (fs.existsSync(dirComponentsLib)) {
+    fs.rmSync(dirComponentsLib, { recursive: true })
+  } else {
+    fs.mkdirSync(dirComponentsLib)
+  }
+  const collection = fractal.components
+  for (let item of collection.flattenDeep()) {
+    // this.log(`${item.handle} - ${item.status.label}`)
+    if (item.relViewPath.includes('01-atoms')) {
+      this.log(item.viewPath, '->', path.join(dirComponentsLib, item.view))
+      fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
+    }
+  }
+
+  // Copy helpers
+  const dirHelpersLib = path.join(__dirname, 'lib/helpers')
+  if (fs.existsSync(dirHelpersLib)) {
+    fs.rmSync(dirHelpersLib, { recursive: true })
+  } else {
+    fs.mkdirSync(dirHelpersLib)
+  }
+  const dirHelpersSrc = path.join(__dirname, 'src/helpers')
+  for (let file of fs.readdirSync(dirHelpersSrc)) {
+    this.log(file, '->', path.join(dirHelpersLib, file))
+    fs.copyFileSync(path.join(dirHelpersSrc, file), path.join(dirHelpersLib, file))
+  }
+
+  done()
+}
+
+function _listComponents(args, done) {
+  const collection = fractal.components
+  for (let item of collection.flattenDeep()) {
+    // this.log(`${item.handle} - ${item.status.label}`)
+    this.log(`${item.relViewPath}`)
   }
   done()
 }
 
-fractal.cli.command('build-all', require('./tasks/buildAll'), {
-  description: 'List all available components'
-})
+fractal.cli.command('build-lib', _buildLib, _config)
 
-fractal.cli.command('list', listComponents, {
-  desc: 'List all available components'
-})
+fractal.cli.command('list-components', _listComponents, _config)
 
 /*
  * Web UI.

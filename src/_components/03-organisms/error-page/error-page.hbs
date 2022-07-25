@@ -1,12 +1,12 @@
 {{#if errorPage }}
-  {{#with errorPage }}
+  {{#exists errorPage }}
     <div class="error-page">
       {{> @image-base}}
       <h1>{{title}}</h1>
       <p>{{text}}</p>
       <a href="{{back.link}}">{{back.text}}</a>
     </div>
-  {{/with }}
+  {{/exists }}
 {{else}}
   {{> @data-not-found data='errorPage'}}
 {{/if}}

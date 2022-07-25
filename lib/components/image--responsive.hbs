@@ -1,0 +1,11 @@
+{{#exists image data="image"}}
+  <figure class="image responsive">
+    <img
+      class="lazyload"
+      src="{{blured name}}"
+      data-srcset="{{sourceSet name}}"
+      data-sizes="auto"
+      alt="{{description}}"
+    />
+  </figure>
+{{/exists}}

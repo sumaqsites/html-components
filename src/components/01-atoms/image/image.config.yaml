@@ -1,5 +1,5 @@
 context:
   image:
-    name: samples/ecommerce/analog-classic
+    name: samples/people/jazz
     description: Image from cloudinary samples
 

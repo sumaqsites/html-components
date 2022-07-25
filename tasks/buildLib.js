@@ -24,10 +24,30 @@ async function _clean() {
   })
 }
 
+// copy components files to lib
+async function _copyComponents() {
+  const entries = fs.readFileSync(config.dir.components)
+  entries.forEach((entry) => {
+    // const fileParsed = path.parse(entry)
+    console.log(entry)
+    // console.log(fileParsed)
+    // stylesFolders.forEach((folder) => {
+    //   if (fileParsed.dir.includes(folder)) {
+    //     const filename = fileParsed.base.startsWith('_') ? fileParsed.base : `_${fileParsed.base}`
+    //     fs.copyFileSync(entry, path.join(config.dir.lib, 'styles', folder, filename))
+    //   }
+    // })
+  }
+  )
+}
+
+
+
 async function buildAll(args, done) {
   const app = this.fractal
   try {
     await _clean()
+    await _copyComponents()
     // await app.compile()
     done()
   } catch (error) {

@@ -1,11 +1,11 @@
-{{#with footer}}
+{{#exists footer}}
   <footer id="{{id}}">
     <div class="contact">
-      {{#with address}}
+      {{#exists address}}
         {{#each this}}
           {{> @address address=this}}
         {{/each}}
-      {{/with}}
+      {{/exists}}
       <a class="impressum" href="/impressum">impressum</a>
     </div>
     {{> @copyright}}
@@ -13,4 +13,4 @@
   </footer>
 {{else }}
   {{> @data-not-found data='image'}}
-{{/with}}
+{{/exists}}

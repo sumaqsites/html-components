@@ -1,11 +1,11 @@
 {{#if comingSoon }}
-  {{#with comingSoon }}
+  {{#exists comingSoon }}
     <div class="coming-soon">
       {{> @image-simple}}
       <h1 class="title">{{ title }}</h1>
       <p class="text">{{ text }}</p>
     </div>
-  {{/with}}
+  {{/exists}}
 {{else}}
   {{> @data-not-found data='comingSoon'}}
 {{/if}}

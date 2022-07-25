@@ -1,4 +1,4 @@
-{{#with sectionAbout }}
+{{#exists sectionAbout }}
   <div class="section-about">
     <h2 class="title">{{ title }}</h2>
     <h3 class="subtitle">{{ subtitle }}</h3>
@@ -7,4 +7,4 @@
   </div>
 {{else}}
   {{> @data-not-found data='sectionAbout'}}
-{{/with}}
+{{/exists}}

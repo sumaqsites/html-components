@@ -1,4 +1,4 @@
-{{#with address}}
+{{#exists address}}
   <address class="address">
     <h6 class="name">{{name}}</h6>
     <p class="line">{{street}}</p>
@@ -11,4 +11,4 @@
   </address>
 {{else}}
   {{> @data-not-found data='address'}}
-{{/with}}
+{{/exists}}

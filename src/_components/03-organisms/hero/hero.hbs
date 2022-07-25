@@ -1,5 +1,5 @@
 {{#if hero }}
-  {{#with hero}}
+  {{#exists hero}}
     <div class="hero">
       {{#if image}} {{> @image-responsive}} {{/if}}
       <div class="cover"></div>
@@ -11,7 +11,7 @@
         {{#if socialNetworks}} {{> @social-networks }} {{/if}}
       </div>
     </div>
-  {{/with }}
+  {{/exists }}
 {{else }}
   {{> @data-not-found data='hero'}}
 {{/if }}

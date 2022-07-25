@@ -1,7 +1,7 @@
-{{#with sections}}
+{{#exists sections}}
   {{#each items}}
     {{> @section-image sectionImage=this}}
   {{/each}}
 {{else}}
   {{> @data-not-found data="sections"}}
-{{/with}}
+{{/exists}}

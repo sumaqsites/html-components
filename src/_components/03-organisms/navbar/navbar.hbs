@@ -1,4 +1,4 @@
-{{#with navbar}}
+{{#exists navbar}}
   <nav class="navbar">
     {{> @brand}}
     {{> @menu}}
@@ -6,4 +6,4 @@
   </nav>
 {{else }}
   {{> @data-not-found data='navbar'}}
-{{/with }}
+{{/exists }}

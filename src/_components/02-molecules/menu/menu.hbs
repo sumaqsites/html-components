@@ -1,4 +1,4 @@
-{{#with menu }}
+{{#exists menu }}
   <ul class="menu" role="navigation">
     {{#each items}}
       <li class="menu-item">
@@ -10,4 +10,4 @@
   </ul>
 {{else}}
   {{> @data-not-found data='menu'}}
-{{/with}}
+{{/exists}}

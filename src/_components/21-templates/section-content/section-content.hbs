@@ -1,4 +1,4 @@
-{{#with sectionContent }}
+{{#exists sectionContent }}
   <section id="{{id}}" class="section-content">
     <header class="heading">
       <h2 class="title">{{ title }}</h2>
@@ -9,4 +9,4 @@
   </section>
 {{else}}
   {{> @data-not-found data='sectionContent'}}
-{{/with}}
+{{/exists}}

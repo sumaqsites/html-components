@@ -1,5 +1,5 @@
 {{#if modal}}
-  {{#with modal}}
+  {{#exists modal}}
     <div class="modal" id="{{id}}">
       <div class="modal-content">
         <div class="modal-header">
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-  {{/with}}
+  {{/exists}}
 {{else}}
   {{> @data-not-found data='modal'}}
  {{/if}}
