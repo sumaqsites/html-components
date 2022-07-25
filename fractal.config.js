@@ -61,33 +61,38 @@ const _config = {
   desc: 'List all available components'
 }
 function _buildLib(args, done) {
-  // Copy components
+  // Limpia la carpeta lib
+  const dirLib = path.join(__dirname, 'lib')
   const dirComponentsLib = path.join(__dirname, 'lib/components')
-  if (fs.existsSync(dirComponentsLib)) {
-    fs.rmSync(dirComponentsLib, { recursive: true })
-  } else {
-    fs.mkdirSync(dirComponentsLib)
-  }
-  const collection = fractal.components
-  for (let item of collection.flattenDeep()) {
-    // this.log(`${item.handle} - ${item.status.label}`)
-    if (item.relViewPath.includes('01-atoms')) {
-      this.log(item.viewPath, '->', path.join(dirComponentsLib, item.view))
-      fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
-    }
-  }
-
-  // Copy helpers
   const dirHelpersLib = path.join(__dirname, 'lib/helpers')
-  if (fs.existsSync(dirHelpersLib)) {
-    fs.rmSync(dirHelpersLib, { recursive: true })
+  if (fs.existsSync(dirLib)) {
+    fs.rmSync(dirLib, { recursive: true })
   } else {
+    fs.mkdirSync(dirLib)
+    fs.mkdirSync(dirComponentsLib)
     fs.mkdirSync(dirHelpersLib)
-  }
-  const dirHelpersSrc = path.join(__dirname, 'src/helpers')
-  for (let file of fs.readdirSync(dirHelpersSrc)) {
-    this.log(file, '->', path.join(dirHelpersLib, file))
-    fs.copyFileSync(path.join(dirHelpersSrc, file), path.join(dirHelpersLib, file))
+
+    // Copy components
+    const collection = fractal.components
+    for (let item of collection.flattenDeep()) {
+      // this.log(`${item.handle} - ${item.status.label}`)
+      if (item.relViewPath.includes('01-atoms')) {
+        this.log(item.viewPath, '->', path.join(dirComponentsLib, item.view))
+        fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
+      }
+    }
+
+    // Copy helpers
+    // if (fs.existsSync(dirHelpersLib)) {
+    //   fs.rmSync(dirHelpersLib, { recursive: true })
+    // } else {
+    //   fs.mkdirSync(dirHelpersLib)
+    // }
+    const dirHelpersSrc = path.join(__dirname, 'src/helpers')
+    for (let file of fs.readdirSync(dirHelpersSrc)) {
+      this.log(file, '->', path.join(dirHelpersLib, file))
+      fs.copyFileSync(path.join(dirHelpersSrc, file), path.join(dirHelpersLib, file))
+    }
   }
 
   done()
