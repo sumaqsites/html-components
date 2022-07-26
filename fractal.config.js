@@ -76,7 +76,7 @@ function _buildLib(args, done) {
   const collection = fractal.components
   for (let item of collection.flattenDeep()) {
     // this.log(`${item.handle} - ${item.status.label}`)
-    if (item.relViewPath.includes('01-atoms')) {
+    if (item.relViewPath.includes('.hbs')) {
       this.log(item.viewPath, '->', path.join(dirComponentsLib, item.view))
       fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
     }
