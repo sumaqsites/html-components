@@ -1,0 +1,9 @@
+{{#exists languages data="language"}}
+  <ul class="languages">
+    {{#each items}}
+      <li class="language-item">
+        <a href="{{link}}" title="{{name}}" aria-current="{{aria}}">{{name}}</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/exists}}
