@@ -11,11 +11,11 @@
   ],
   "scripts": {
     "start": "fractal start",
-    "build": "fractal build-lib",
+    "build": "fractal build",
+    "build:lib": "fractal build-lib",
     "test": "gulp test",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build",
-    "build:lib": "fractal build-lib",
     "build:list": "fractal list-components"
   },
   "devDependencies": {
