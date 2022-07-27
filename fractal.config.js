@@ -6,6 +6,7 @@ const fractal = require('@frctl/fractal').create()
 const fractalWeb = require('./fractal/web')
 const packageInfo = require('./package.json')
 const fractalStyles = require('./fractal/styles')
+const fg = require('fast-glob')
 
 const config = {
   dir: {
@@ -42,7 +43,7 @@ fractal.set('project.author', packageInfo.author.name)
 /*
  * Defaults
  */
-fractal.components.set('default.preview', '@preview');
+fractal.components.set('default.preview', '@preview')
 fractal.components.set('default.status', 'wip')
 fractal.components.set('default.context', {
   cloudinary: { link: 'https://res.cloudinary.com/sumaqsites/image/upload' }
@@ -79,7 +80,7 @@ fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
 const _config = {
   desc: 'List all available components'
 }
-function _buildLib(args, done) {
+async function _buildLib(args, done) {
   // Limpia la carpeta lib
   const dirLib = path.join(__dirname, 'lib')
   const dirComponentsLib = path.join(__dirname, 'lib/components')
@@ -90,6 +91,9 @@ function _buildLib(args, done) {
   fs.mkdirSync(dirLib)
   fs.mkdirSync(dirComponentsLib)
   fs.mkdirSync(dirHelpersLib)
+  fs.mkdirSync(path.join(config.dir.base, 'lib/styles/base'), { recursive: true })
+  fs.mkdirSync(path.join(config.dir.base, 'lib/styles/components'), { recursive: true })
+  fs.mkdirSync(path.join(config.dir.base, 'lib/styles/themes'), { recursive: true })
 
   // Copy components
   const collection = fractal.components
@@ -100,11 +104,36 @@ function _buildLib(args, done) {
       fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
     }
   }
+  // copy helpers
   const dirHelpersSrc = path.join(__dirname, 'src/helpers')
   for (let file of fs.readdirSync(dirHelpersSrc)) {
     this.log(file, '->', path.join('lib/helpers', file))
     fs.copyFileSync(path.join(dirHelpersSrc, file), path.join(dirHelpersLib, file))
   }
+
+  // copy base
+  const sassBaseFiles = await fg([path.join(config.dir.src, 'styles/base/*.scss')])
+  sassBaseFiles.forEach((file) => {
+    const fileName = path.parse(file).base
+    this.log(fileName, '->', path.join('lib/styles/base', fileName))
+    fs.copyFileSync(file, path.join(config.dir.base, 'lib/styles/base', fileName))
+  })
+
+  // copy styles components
+  const sassComponentsFiles = await fg([path.join(config.dir.components, '**/*.scss')])
+  sassComponentsFiles.forEach((file) => {
+    const fileName = path.parse(file).base
+    this.log(fileName, '->', path.join('lib/styles/components', fileName))
+    fs.copyFileSync(file, path.join(config.dir.base, 'lib/styles/components', fileName))
+  })
+
+    // copy themes
+    const sassThemesFiles = await fg([path.join(config.dir.src, 'styles/themes/*.scss')])
+    sassThemesFiles.forEach((file) => {
+      const fileName = path.parse(file).base
+      this.log(fileName, '->', path.join('lib/styles/themes', fileName))
+      fs.copyFileSync(file, path.join(config.dir.base, 'lib/styles/themes', fileName))
+    })
 
   done()
 }
@@ -122,12 +151,10 @@ fractal.cli.command('build-lib', _buildLib, _config)
 
 fractal.cli.command('list-components', _listComponents, _config)
 
-
 /*
  * Export
  */
 fractalStyles(config)
-
 
 /*
  * Web UI.
