@@ -1,0 +1,8 @@
+{{#exists brand data="brand"}}
+  <a class="brand" href="{{url}}">
+    {{#if image}}
+      <img src="{{imageSource image.source}}" alt="{{image.description}}" />
+    {{/if}}
+    {{#if name}}<span>{{name}}</span>{{/if}}
+  </a>
+{{/exists}}

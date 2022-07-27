@@ -1,0 +1,11 @@
+{{#exists menu data="menu"}}
+  <ul class="menu" role="navigation">
+    {{#each items}}
+      <li class="menu-item">
+        <a href="{{url}}" title="{{name}}">
+          <span>{{name}}</span>
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+{{/exists}}

@@ -1,0 +1,13 @@
+context:
+  menu:
+    title: Menu
+    items:
+      - name: Home
+        url: '#'
+        aria: page
+      - name: Theme
+        url: '#'
+        aria: 'false'
+      - name: Error page
+        url: '#'
+        aria: 'false'

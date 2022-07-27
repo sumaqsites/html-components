@@ -1,6 +1,6 @@
 {
   "name": "@sumaqsites/html-components",
-  "description": "",
+  "description": "Sumaq Sites - Html Components Library",
   "author": {
     "name": "Sumaq sites",
     "email": "elingan@gmail.com"
@@ -10,8 +10,8 @@
     "lib/**/*"
   ],
   "scripts": {
-    "start": "fractal start --sync",
-    "build": "gulp build",
+    "start": "fractal start",
+    "build": "fractal build-lib",
     "test": "gulp test",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build",
@@ -33,6 +33,6 @@
     "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.1.0",
     "lazysizes": "^5.3.2",
-    "sass": "^1.43.4"
+    "sass": "^1.54.0"
   }
 }
