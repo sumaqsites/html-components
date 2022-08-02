@@ -1,24 +1,22 @@
 'use strict'
 
+const fg = require('fast-glob')
 const fs = require('fs')
 const path = require('path')
 const fractal = require('@frctl/fractal').create()
-const fractalWeb = require('./fractal/web')
 const packageInfo = require('./package.json')
-const fractalStyles = require('./fractal/styles')
-const fg = require('fast-glob')
+const fractalWeb = require('./fractal/tasks/web')
+const fractalStyles = require('./fractal/tasks/styles')
 
 const config = {
   dir: {
     base: __dirname,
+    lib: path.join(__dirname, 'lib'),
     src: path.join(__dirname, 'src'),
     components: path.join(__dirname, 'src/components'),
     helpers: path.join(__dirname, 'src/helpers')
   }
 }
-
-// const helpers = require('./assets/scripts/helpers')
-// const partials = require('./assets/scripts/partials')
 
 // Handlebars helpers
 const helpers = {}
@@ -80,39 +78,42 @@ fractal.web.set('builder.dest', path.join(__dirname, 'dist'))
 const _config = {
   desc: 'List all available components'
 }
-async function _buildLib(args, done) {
-  // Limpia la carpeta lib
-  const dirLib = path.join(__dirname, 'lib')
-  const dirComponentsLib = path.join(__dirname, 'lib/components')
-  const dirHelpersLib = path.join(__dirname, 'lib/helpers')
-  if (fs.existsSync(dirLib)) {
-    fs.rmSync(dirLib, { recursive: true })
+
+async function _cleanLib() {
+  if (fs.existsSync(config.dir.lib)) {
+    fs.rmSync(config.dir.lib, { recursive: true })
   }
-  fs.mkdirSync(dirLib)
+  fs.mkdirSync(config.dir.lib)
   fs.mkdirSync(dirComponentsLib)
   fs.mkdirSync(dirHelpersLib)
   fs.mkdirSync(path.join(config.dir.base, 'lib/styles/base'), { recursive: true })
   fs.mkdirSync(path.join(config.dir.base, 'lib/styles/components'), { recursive: true })
   fs.mkdirSync(path.join(config.dir.base, 'lib/styles/themes'), { recursive: true })
+}
+
+async function _buildLib(args, done) {
+  // Limpia la carpeta lib
+  const dirComponentsLib = path.join(config.dir.lib, 'components')
+  const dirHelpersLib = path.join(config.dir.lib, 'helpers')
+
+  await _cleanLib()
 
   // Copy components
   const collection = fractal.components
   for (let item of collection.flattenDeep()) {
-    // this.log(`${item.handle} - ${item.status.label}`)
     if (item.relViewPath.includes('.hbs')) {
-      this.log(item.view, '->', path.join('lib/components', item.view))
+      this.log('Copy', item.view, '->', path.join('lib/components', item.view))
       fs.copyFileSync(item.viewPath, path.join(dirComponentsLib, item.view))
     }
   }
   // copy helpers
-  const dirHelpersSrc = path.join(__dirname, 'src/helpers')
-  for (let file of fs.readdirSync(dirHelpersSrc)) {
-    this.log(file, '->', path.join('lib/helpers', file))
+  for (let file of fs.readdirSync(config.dir.helpers)) {
+    this.log('Copy', file, '->', path.join('lib/helpers', file))
     fs.copyFileSync(path.join(dirHelpersSrc, file), path.join(dirHelpersLib, file))
   }
 
   // copy base
-  const sassBaseFiles = await fg([path.join(config.dir.src, 'styles/base/*.scss')])
+  const sassBaseFiles = await fg([path.join(config.dir.src, 'styles', 'base', '*.scss')])
   sassBaseFiles.forEach((file) => {
     const fileName = path.parse(file).base
     this.log(fileName, '->', path.join('lib/styles/base', fileName))

@@ -33,6 +33,8 @@
   --breakpoint-large: #{$breakpoint-large};
   --breakpoint-wide: #{$breakpoint-wide};
 
+  --font-size-lg: #{$font-size-2};
+
 }
 
 @mixin darkMode {
