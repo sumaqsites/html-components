@@ -4,5 +4,5 @@ context:
     name: Lorem Ipsum
     url: '#'
     image:
-      source: assets/sumaq-logo_svg
+      source: assets/sumaq-logo-svg
       description: Lorem Impsum Logo

@@ -1,5 +1,6 @@
 context:
+  text: "Image"
   image:
-    name: samples/people/jazz
+    name: samples/bike
     description: Image from cloudinary samples
 

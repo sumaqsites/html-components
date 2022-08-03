@@ -10,17 +10,18 @@ module.exports = async function (config) {
   // const componentsFiles = await fg(path.join(config.dir.components, '**/*.scss'))
   // console.log(componentsFiles)
 
-  // compile a sass file
+  // compile theme sass file
   const themeStyles = await sass.compileAsync(path.join(config.dir.base, 'fractal/theme/styles/theme.scss'), {
     //outputStyle: 'compressed'
   })
-  fs.writeFileSync(path.join(config.dir.base, 'public/styles/theme.css'), themeStyles.css)
-  console.log('Theme compiled!')
+  fs.writeFileSync(path.join(config.dir.public, 'styles/theme.css'), themeStyles.css)
+  console.log('Theme sass compiled!')
 
+  // compile preview sass file
   const previewStyles = await sass.compileAsync(path.join(config.dir.base, 'fractal/theme/styles/preview.scss'), {
     // importers: componentsFiles
     //outputStyle: 'compressed'
   })
-  fs.writeFileSync(path.join(config.dir.base, 'public/styles/preview.css'), previewStyles.css)
-  console.log('Preview compiled!')
+  fs.writeFileSync(path.join(config.dir.public, 'styles/preview.css'), previewStyles.css)
+  console.log('Preview sass compiled!')
 }

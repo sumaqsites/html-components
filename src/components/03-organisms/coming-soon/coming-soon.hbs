@@ -1,7 +1,7 @@
 {{#exists coming-soon data='coming-soon'}}
   <div class="coming-soon">
-    {{> @image}}
-    <h1 class="title">{{ title }}</h1>
+    {{#if image }}{{> @image}}{{/if}}
+    <p class="title">{{ title }}</p>
     <p class="text">{{ text }}</p>
   </div>
 {{/exists}}

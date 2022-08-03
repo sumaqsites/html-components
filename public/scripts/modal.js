@@ -1,4 +1,6 @@
-function initModal() {}
-
-export { initModal }
-export default initModal()
+(() => {
+  // src/scripts/modal.js
+  function initModal() {
+  }
+  var modal_default = initModal();
+})();

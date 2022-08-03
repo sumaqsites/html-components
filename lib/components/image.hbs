@@ -1,5 +1,16 @@
 {{#exists image data="image"}}
+  {{!-- <figure class="image">
+    <img loading="lazy" class="lazyload" src="{{imageBlurred name}}" data-src="{{imageSource name}}" alt="{{description}}" />
+  </figure> --}}
   <figure class="image">
-    <img class="lazyload" src="{{blured name}}" data-src="{{imageSource name}}" alt="{{description}}" />
+    <img class="lazyload" src="{{imageBlurred name}}" data-src="{{imageSource name}}" alt="{{description}}" />
   </figure>
+  {{!-- <figure class="image">
+    <img
+      class="lazy"
+      src="{{imageBlurred name}}"
+      srcset="{{imageSource name}}"
+      sizes="(min-width: 36em) 33.3vw, 100vw"
+      alt="{{description}}" />
+  </figure> --}}
 {{/exists}}
