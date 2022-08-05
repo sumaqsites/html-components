@@ -11,12 +11,11 @@
   ],
   "scripts": {
     "start": "fractal start",
-    "build": "fractal build",
+    "build": "fractal build-lib && fractal build",
+    "build:fractal": "fractal build",
     "build:lib": "fractal build-lib",
-    "test": "gulp test",
-    "fractal:start": "fractal start --sync",
-    "fractal:build": "fractal build",
-    "build:list": "fractal list-components"
+    "build:list": "fractal list-components",
+    "test": "gulp test"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

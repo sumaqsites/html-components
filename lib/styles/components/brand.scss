@@ -1,10 +1,14 @@
 .brand {
+  position: relative;
   height: 100%;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   img {
     height: 100%;
     width: auto;
-    margin-right: 1rem;
+    // margin-right: 1rem;
+  }
+  p {
+    margin: 0;
   }
 }
