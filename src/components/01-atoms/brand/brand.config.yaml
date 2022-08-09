@@ -1,8 +1,19 @@
 title: Brand
 context:
   brand:
-    name: Lorem Ipsum
     url: '#'
-    image:
-      source: assets/sumaq-logo-svg
-      description: Lorem Impsum Logo
+    name: Lorem Ipsum
+variants:
+  - name: default
+    context:
+      brand:
+        logo:
+          source: assets/sumaq-logo-svg
+          description: Lorem Impsum Logo
+  - name: text
+  - name: logo
+    context:
+      brand:
+        logo:
+          source: assets/sumaq-logo-svg
+          description: Lorem Impsum Logo

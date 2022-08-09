@@ -4,8 +4,8 @@
 @import '../../../src/styles/base/responsive';
 @import '../../../src/styles/themes/base';
 @import '../../../src/components/01-atoms/brand/brand.scss';
-// @import '../../../src/components/01-atoms/go-down/_go-down.scss';
-// @import '../../../src/components/01-atoms/go-up/go-up.scss';
+@import '../../../src/components/01-atoms/go-down/go-down.scss';
+@import '../../../src/components/01-atoms/go-up/go-up.scss';
 // @import '../../../src/components/01-atoms/header/title.scss';
 @import '../../../src/components/01-atoms/image/image.scss';
 // @import '../../../src/components/01-atoms/link/link.scss';
@@ -23,21 +23,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   position: relative;
-  height: 100%;
+  height: 100vh;
 }
 
 .container {
   position: relative;
-  padding: 0.5rem;
-  background-color: $background-alt;
-  text-align: center;
+  background-color: $gray-lighter;
 }
 
 .full-height {
   position: relative;
   height: 100vh;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .data-not-found {
@@ -47,7 +43,6 @@ body {
 }
 
 a {
-  //   color: $gray-dark;
   text-decoration: none;
   &:hover {
     text-decoration: underline;

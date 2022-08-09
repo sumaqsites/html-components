@@ -29,5 +29,5 @@ function initGoDown() {
   // }
 }
 
-export { initGoDown }
 export default initGoDown
+export { initGoDown }

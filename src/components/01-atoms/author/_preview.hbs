@@ -5,20 +5,23 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Preview</title>
     <link rel="stylesheet" href="{{path '/styles/preview.css'}}">
-  </head>
-  <body>
-    <nav class="container">
-      {{{yield}}}
-      <div>Menu options...</div>
-    </nav>
     <style>
+      body {
+        display: flex;
+        align-items: flex-end;
+      }
       .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 150px;
-        padding:1rem;
+        justify-content: center;
+        height: 100px;
+        width: 100%;
       }
     </style>
+  </head>
+  <body>
+    <footer class="container">
+      {{{yield}}}
+    </footer>
   </body>
 </html>

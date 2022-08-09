@@ -1,8 +1,9 @@
 {{#exists brand data="brand"}}
   <div class="brand">
     <a href="{{url}}" title="{{name}}">
-      <img src="{{imageSource logo.source}}" alt="{{logo.description}}" />
-      <p>{{name}}</p>
+      {{#if name}}
+        <p>{{name}}</p>
+      {{/if}}
     </a>
   </div>
 {{/exists}}

@@ -488,12 +488,56 @@ html[data-theme=dark] {
   position: relative;
   height: 100%;
 }
-.brand img {
+.brand a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
+}
+.brand a img {
+  height: 100px;
   width: auto;
 }
-.brand p {
-  margin: 0;
+.brand a p {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+/* // Inspitarion: https://codepen.io/nxworld/pen/OyRrGy */
+.go-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  z-index: 10;
+}
+.go-down:hover {
+  background-color: hsl(0deg, 0%, 90%);
+}
+.go-down svg {
+  width: 30px;
+  height: 30px;
+}
+
+.go-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: hsl(0deg, 0%, 100%);
+  z-index: 10;
+}
+.go-up:hover {
+  background-color: hsl(0deg, 0%, 90%);
+}
+.go-up svg {
+  width: 30px;
+  height: 30px;
 }
 
 .image {
@@ -566,21 +610,17 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   position: relative;
-  height: 100%;
+  height: 100vh;
 }
 
 .container {
   position: relative;
-  padding: 0.5rem;
-  background-color: hsl(0deg, 0%, 98%);
-  text-align: center;
+  background-color: hsl(0deg, 0%, 90%);
 }
 
 .full-height {
   position: relative;
   height: 100vh;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .data-not-found {
