@@ -3,5 +3,6 @@ context:
     title: COMING SOON
     text: 'Our website is under construction, follow us for update now!'
     image:
-      name: assets/sumaq-logo-dark
-      description: SUMAQ logo image
+      source: assets/sumaq-logo
+      name: Logo Lorem Ipsum
+      description: Lorem Ipsum

@@ -1,5 +1,6 @@
 {{#exists image data="image"}}
-  <figure class="image">
+  <figure class="image caption">
     <img class="lazyload" src="{{imageBlurred source}}" data-src="{{imageSource source}}" alt="{{name}}" />
+    <figcaption>{{description}}</figcaption>
   </figure>
 {{/exists}}

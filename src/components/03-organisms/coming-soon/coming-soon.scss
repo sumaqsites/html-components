@@ -7,7 +7,7 @@
   height: 100%;
 
   .image {
-    width: 300px;
+    width: 250px;
     height: auto;
     margin-bottom: 4rem;
   }
@@ -22,8 +22,5 @@
   }
   @include small-devices() {
     padding: 0 10vw;
-    // .simple-image {
-    //   margin-bottom: 6rem;
-    // }
   }
 }

@@ -1,6 +1,16 @@
 context:
   text: "Image"
   image:
-    name: samples/bike
-    description: Image from cloudinary samples
+    source: samples/bike
+    name: Lorem ipsum image
+variants:
+  - name: Caption
+    context:
+      image:
+        description: Lorem ipsum caption
+  - name: Responsive
+  - name: Caption Responsive
+    context:
+      image:
+        description: Lorem ipsum caption
 
