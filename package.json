@@ -1,14 +1,25 @@
 {
   "name": "@sumaqsites/html-components",
   "description": "Sumaq Sites - Html Components Library",
-  "author": {
-    "name": "Sumaq sites",
-    "email": "elingan@gmail.com"
-  },
+  "author": "Sumaq sites <elingan@gmail.com>",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sumaqsites/html-components.git"
+  },
+  "keywords": [
+    "html",
+    "components",
+    "sass",
+    "javascript"
+  ],
   "files": [
     "lib/**/*"
   ],
+  "main": ".prettierrc.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "start": "fractal start",
     "build": "fractal build-lib && fractal build",
@@ -20,7 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
-    "@frctl/fractal": "^1.5.13",
+    "@frctl/fractal": "^1.5.14",
     "@frctl/handlebars": "^1.2.14",
     "@frctl/mandelbrot": "^1.10.1",
     "esbuild": "^0.14.53",
@@ -29,5 +40,6 @@
   },
   "publishConfig": {
     "@sumaqsites:registry": "https://npm.pkg.github.com"
-  }
+  },
+  "license": "ISC"
 }
