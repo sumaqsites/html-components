@@ -38,8 +38,5 @@
     "fast-glob": "^3.2.7",
     "sass": "^1.54.0"
   },
-  "publishConfig": {
-    "@sumaqsites:registry": "https://npm.pkg.github.com"
-  },
   "license": "ISC"
 }
