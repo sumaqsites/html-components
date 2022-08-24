@@ -9,12 +9,17 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm run build:lib
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Install dependencies
+        run: npm install
+      - name: Build the package
+        run: npm run build:lib
+      - name: Publish to NPM
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
