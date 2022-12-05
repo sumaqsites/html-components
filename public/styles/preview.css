@@ -503,43 +503,6 @@ html[data-theme=dark] {
   text-transform: uppercase;
 }
 
-/* // Inspitarion: https://codepen.io/nxworld/pen/OyRrGy */
-.go-down {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  background-color: hsl(0deg, 0%, 100%);
-  cursor: pointer;
-  z-index: 10;
-}
-.go-down:hover {
-  background-color: hsl(0deg, 0%, 90%);
-}
-.go-down svg {
-  width: 30px;
-  height: 30px;
-}
-
-.go-up {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  background-color: hsl(0deg, 0%, 100%);
-  z-index: 10;
-}
-.go-up:hover {
-  background-color: hsl(0deg, 0%, 90%);
-}
-.go-up svg {
-  width: 30px;
-  height: 30px;
-}
-
 .image {
   position: relative;
   width: 100%;

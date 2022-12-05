@@ -1,4 +1,5 @@
 title: Brand
+status: ready
 context:
   brand:
     url: '#'

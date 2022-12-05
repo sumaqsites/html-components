@@ -1,4 +1,4 @@
-# SUMAQ HTML Components
+# Sumaq Sites HTML Components
 
 ## Versionado y publicación
 
