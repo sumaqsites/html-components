@@ -1,0 +1,6 @@
+context:
+  pageImage:
+    title: Micro CMS - In progress
+    image:
+      source: samples/bike
+      name: Lorem ipsum image

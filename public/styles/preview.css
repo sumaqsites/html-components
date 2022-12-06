@@ -531,6 +531,41 @@ html[data-theme=dark] {
   z-index: 1;
 }
 
+.menu-icon {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: transparent;
+}
+.menu-icon.round .line {
+  stroke-linecap: round;
+}
+.menu-icon.opened .line.top {
+  transform-origin: top left;
+  transform: rotate(45deg) translateY(-10%) translateX(8%) scaleX(1.26);
+}
+.menu-icon.opened .line.middle {
+  transform-origin: center center;
+  transform: rotate(-45deg) scaleX(1.26);
+}
+.menu-icon.opened .line.bottom {
+  transform: translateY(100%);
+  stroke-opacity: 0;
+}
+.menu-icon .line {
+  fill: none;
+  stroke: black;
+  stroke-width: 15;
+  stroke-linecap: square;
+  transition: all 0.2s ease-in-out;
+}
+.menu-icon .line.top, .menu-icon .line.middle, .menu-icon .line.bottom {
+  stroke-opacity: 1;
+}
+
 .menu {
   list-style: none;
   margin: 0;
@@ -549,6 +584,45 @@ html[data-theme=dark] {
     display: flex;
     flex-direction: row;
   }
+}
+
+.page-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.page-image h2 {
+  text-transform: uppercase;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-image figure {
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  height: auto;
+}
+.page-image figure img {
+  width: 100%;
+  height: auto;
+}
+
+.page-text {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+}
+.page-text h2 {
+  text-transform: uppercase;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-text p {
+  line-break: auto;
 }
 
 .coming-soon {

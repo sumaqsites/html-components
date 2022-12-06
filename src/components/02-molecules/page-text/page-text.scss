@@ -1,0 +1,16 @@
+.page-text {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+
+  h2 {
+    text-transform: uppercase;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    line-break: auto
+  };
+}

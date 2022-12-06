@@ -1,0 +1,11 @@
+context:
+  listPageImage:
+    items:
+      - title: Micro CMS - In progress
+        image:
+          source: samples/bike
+          name: Lorem ipsum image
+      - title: Micro CMS - In progress 2
+        image:
+          source: samples/bike
+          name: Lorem ipsum image 2

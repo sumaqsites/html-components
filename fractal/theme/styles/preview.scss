@@ -9,10 +9,12 @@
 // @import '../../../src/components/01-atoms/header/title.scss';
 @import '../../../src/components/01-atoms/image/image.scss';
 // @import '../../../src/components/01-atoms/link/link.scss';
-// @import '../../../src/components/01-atoms/menu-icon/_menu-icon.scss';
+@import '../../../src/components/01-atoms/menu-icon/menu-icon.scss';
 // @import '../../../src/components/01-atoms/typewriter/_typewriter.scss';
 @import '../../../src/components/02-molecules/menu/menu.scss';
 // @import '../../../src/components/02-molecules/languages/languages.scss';
+@import '../../../src/components/02-molecules/page-image/page-image.scss';
+@import '../../../src/components/02-molecules/page-text/page-text.scss';
 @import '../../../src/components/03-organisms/coming-soon/coming-soon.scss';
 
 html {
