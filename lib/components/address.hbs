@@ -1,0 +1,12 @@
+{{#exists address data='address'}}
+  <address class="address">
+    <p class="name">{{name}}</p>
+    <p class="line">{{street}}</p>
+    <p class="line">{{zip}} {{city}}</p>
+    {{#if country}}<p class="line">{{country}}</p>{{/if}}
+    {{#each phone}}
+      <a class="phone" href="tel:{{this}}">{{this}}</a>
+    {{/each}}
+    <a class="email" href="mailto:{{email}}">{{email}}</a>
+  </address>
+{{/exists}}
