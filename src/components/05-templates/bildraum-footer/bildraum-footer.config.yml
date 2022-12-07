@@ -18,11 +18,12 @@ context:
           - +43 316 232230
           - +43 664 2125820
         email: bg@bildraum.at
-
+    impressum:
+      name: Impressum
+      link: '/impressum'
     author:
       text: Made by
       name: SUMAQ Websites
       link: 'https://sumaqsites.com'
     copyright:
-      year: ©2021
-      name: bildraum Büro für Mediengestaltung e.U.
+      text: ©2022 bildraum Büro für Mediengestaltung e.U.

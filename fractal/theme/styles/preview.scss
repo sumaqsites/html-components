@@ -1,8 +1,9 @@
-@import '../../../src/styles/base/reset';
+// @import '../../../src/styles/base/reset';
 @import '../../../src/styles/base/normalize';
 @import '../../../src/styles/base/variables';
 @import '../../../src/styles/base/responsive';
 @import '../../../src/styles/themes/base';
+
 @import '../../../src/components/01-atoms/brand/brand.scss';
 // @import '../../../src/components/01-atoms/go-down/go-down.scss';
 // @import '../../../src/components/01-atoms/go-up/go-up.scss';
@@ -11,14 +12,21 @@
 // @import '../../../src/components/01-atoms/link/link.scss';
 @import '../../../src/components/01-atoms/menu-icon/menu-icon.scss';
 // @import '../../../src/components/01-atoms/typewriter/_typewriter.scss';
+
 @import '../../../src/components/02-molecules/menu/menu.scss';
 // @import '../../../src/components/02-molecules/languages/languages.scss';
 @import '../../../src/components/02-molecules/page-image/page-image.scss';
 @import '../../../src/components/02-molecules/page-text/page-text.scss';
+@import '../../../src/components/02-molecules/address/address.scss';
+
 @import '../../../src/components/03-organisms/coming-soon/coming-soon.scss';
+
+@import '../../../src/components/05-templates/bildraum-footer/bildraum-footer.scss';
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
 body {

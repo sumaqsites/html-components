@@ -1,5 +1,0 @@
-context:
-  link:
-    target: '_blank'
-    url: 'https://www.google.com'
-    text: Link component

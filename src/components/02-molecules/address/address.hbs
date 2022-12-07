@@ -1,6 +1,6 @@
-{{#exists address}}
+{{#exists address data='address'}}
   <address class="address">
-    <h6 class="name">{{name}}</h6>
+    <p class="name">{{name}}</p>
     <p class="line">{{street}}</p>
     <p class="line">{{zip}} {{city}}</p>
     {{#if country}}<p class="line">{{country}}</p>{{/if}}
@@ -9,6 +9,4 @@
     {{/each}}
     <a class="email" href="mailto:{{email}}">{{email}}</a>
   </address>
-{{else}}
-  {{> @data-not-found data='address'}}
 {{/exists}}

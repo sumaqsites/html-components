@@ -6,23 +6,18 @@
     <title>Preview</title>
     <link rel="stylesheet" href="{{path '/styles/preview.css'}}">
     <style>
+      :root {
+        --primary: #ccb78f;
+        --secondary: #342b22;
+      }
       body {
+        width: 100%;
         display: flex;
         align-items: flex-end;
-      }
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        width: 100%;
-        color: black;
       }
     </style>
   </head>
   <body>
-    <footer class="container">
-      {{{yield}}}
-    </footer>
+    {{{yield}}}
   </body>
 </html>

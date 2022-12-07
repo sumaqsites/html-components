@@ -1,0 +1,14 @@
+{{#exists footer data='bildraum-footer'}}
+  <footer id="{{ id }}">
+    <div class="contact">
+      {{#each address}}
+        {{> @address address=.}}
+      {{/each}}
+      {{> @impressum }}
+    </div>
+    <div class="info">
+      {{> @copyright}}
+      {{> @author}}
+    </div>
+  </footer>
+{{/exists}}
