@@ -382,6 +382,13 @@ template {
  * http://devfacts.com/media-queries-breakpoints-2020/
  * https://www.browserstack.com/guide/ideal-screen-sizes-for-responsive-design
  */
+:root {
+  --breakpoint-small: 640px;
+  --breakpoint-medium: 960px;
+  --breakpoint-large: 1344px;
+  --breakpoint-wide: 1920px;
+}
+
 /**
  * Aqui se agregan todos los mixins que me ayude a generar
  * colores, formas, etc, solo las realmente y minimamente necesarias
@@ -623,7 +630,7 @@ html[data-theme=dark] {
   display: inline-block;
   padding: 1rem;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: var(--breakpoint-small)) {
   .menu.horizontal {
     flex-direction: row;
     align-items: flex-start;
@@ -740,7 +747,7 @@ html[data-theme=dark] {
   font-size: 1.75rem;
   text-align: center;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: var(--breakpoint-small)) {
   .coming-soon {
     padding: 0 10vw;
   }
@@ -950,7 +957,7 @@ html[data-theme=dark] {
   display: block;
   color: var(--primary);
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: var(--breakpoint-small)) {
   .bildraum-kontakt {
     display: flex;
     flex-direction: row;
