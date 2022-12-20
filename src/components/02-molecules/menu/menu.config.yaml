@@ -1,14 +1,19 @@
 status: ready
 context:
   menu:
-    title: Menu
     items:
       - name: Home
-        url: '#'
+        link: '#'
         aria: page
+        isActive: true
       - name: Theme
-        url: '#'
-        aria: 'false'
-      - name: Error page
-        url: '#'
-        aria: 'false'
+        link: '#'
+        aria: false
+      - name: Page
+        link: '#'
+        aria: false
+variants:
+  - name: vertical
+    context:
+      menu:
+        position: vertical

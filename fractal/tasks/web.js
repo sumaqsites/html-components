@@ -1,7 +1,9 @@
+const path = require('path')
+const mandelbrot = require('@frctl/mandelbrot')
+const packageInfo = require('../../package.json')
+
 module.exports = function (config, fractal) {
-  const path = require('path')
-  const mandelbrot = require('@frctl/mandelbrot')
-  const packageInfo = require('../../package.json')
+
 
   /*
    * Web UI.
@@ -41,7 +43,7 @@ module.exports = function (config, fractal) {
           return value.toLocaleDateString('de')
         }
       },
-      { label: 'Author', value: 'SUMAQ websites' }
+      { label: 'Author', value: 'Sumaq Sites' }
     ]
   })
 

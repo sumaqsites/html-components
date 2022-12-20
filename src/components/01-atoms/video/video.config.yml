@@ -1,0 +1,16 @@
+status: ready
+context:
+  video:
+    source: https://www.w3schools.com/html/mov_bbb.mp4
+    name: Video name
+variants:
+  - name: youtube
+    context:
+      video:
+        type: youtube
+        source: https://www.youtube.com/embed/AzcTJdt6FNs
+  - name: vimeo
+    context:
+      video:
+        type: vimeo
+        source: https://i.vimeocdn.com/custom_asset/8bde48e510ec8c3c437a3a356c4d7ca0?w=1200&q=60

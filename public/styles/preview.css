@@ -1,3 +1,68 @@
+/****** Elad Shechter's RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -30,11 +95,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -309,7 +369,7 @@ template {
   display: none;
 }
 
-/*
+/**
  * Inspirado en las variables de Bulma
  * https://github.com/picocss/pico/blob/master/css/pico.css
  * https://github.com/kognise/water.css/blob/master/src/variables-light.css
@@ -326,7 +386,7 @@ template {
  * Aqui se agregan todos los mixins que me ayude a generar
  * colores, formas, etc, solo las realmente y minimamente necesarias
  */
-/*
+/**
  * Inspirado en las variables de Bulma
  * https://github.com/picocss/pico/blob/master/css/pico.css
  * https://github.com/kognise/water.css/blob/master/src/variables-light.css
@@ -417,9 +477,16 @@ html[data-theme=dark] {
     --danger: hsl(348deg, 86%, 61%);
   }
 }
+.author {
+  opacity: 0.75;
+}
+.author:hover {
+  opacity: 1;
+}
+
 .brand {
   position: relative;
-  height: 100%;
+  height: 100px;
 }
 .brand a {
   display: flex;
@@ -428,12 +495,40 @@ html[data-theme=dark] {
   height: 100%;
 }
 .brand a img {
-  height: 100px;
-  width: auto;
+  height: 100%;
 }
 .brand a p {
   margin: 0 1rem;
   text-transform: uppercase;
+}
+
+/* // Inspitarion: https://codepen.io/nxworld/pen/OyRrGy */
+.go-down {
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.8;
+  z-index: 10;
+}
+.go-down:hover {
+  opacity: 1;
+}
+.go-down svg {
+  width: 100%;
+  height: 100%;
+}
+
+.go-up {
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.8;
+  z-index: 10;
+}
+.go-up:hover {
+  opacity: 1;
+}
+.go-up svg {
+  width: 100%;
+  height: 100%;
 }
 
 .image {
@@ -462,6 +557,19 @@ html[data-theme=dark] {
   align-items: center;
   color: hsl(0deg, 0%, 100%);
   z-index: 1;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video video,
+.video iframe {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-icon {
@@ -500,9 +608,12 @@ html[data-theme=dark] {
 }
 
 .menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
 }
 .menu-item {
   display: flex;
@@ -510,12 +621,12 @@ html[data-theme=dark] {
 }
 .menu-item a {
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
 }
 @media screen and (min-width: 640px) {
-  .menu {
-    display: flex;
+  .menu.horizontal {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -525,57 +636,86 @@ html[data-theme=dark] {
   height: 100vh;
 }
 .page-image h2 {
-  text-transform: uppercase;
-  height: 4rem;
+  height: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .page-image figure {
+  padding-top: 2rem;
   position: absolute;
-  top: 4rem;
+  top: 0rem;
   bottom: 0;
-  height: auto;
-}
-.page-image figure img {
-  width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .page-text {
   position: relative;
   width: 100%;
-  padding: 1rem;
 }
 .page-text h2 {
-  text-transform: uppercase;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: bold;
 }
 .page-text p {
   line-break: auto;
+}
+
+.page-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.page-video h2 {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.page-video .video {
+  height: calc(100% - 2rem);
+}
+
+.page-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(0deg, 0%, 55%);
+  background-color: hsl(0deg, 0%, 97%);
+  padding: 4rem;
+}
+.page-error .image {
+  width: 300px;
+  margin-bottom: 4rem;
+}
+.page-error h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.page-error p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .address {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 1rem;
 }
 .address .name {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   margin-bottom: 1rem;
 }
-.address .line {
-  margin: 0;
-}
-.address .line:last-of-type {
+.address .lines {
   margin-bottom: 1rem;
 }
-.address .email {
-  margin-top: 1rem;
+.address .lines a {
+  display: block;
+}
+.address .phones {
+  margin-bottom: 1rem;
+}
+.address .phones a {
+  display: block;
 }
 
 .coming-soon {
@@ -606,73 +746,219 @@ html[data-theme=dark] {
   }
 }
 
-footer {
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  background-color: var(--secondary);
+  display: flex;
+}
+.hero .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hero .cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, hsl(0deg, 0%, 0%), hsl(0deg, 0%, 55%));
+  opacity: 0.5;
+  z-index: 2;
+}
+.hero .content {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  padding: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
   color: var(--white);
-  padding: 4rem 2rem 2rem;
 }
-footer .contact {
-  margin-bottom: 4rem;
+.hero .content .title {
+  font-size: var(--font-size-larger);
 }
-footer .address {
+/***** Animations */
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0) scaleY(0.985);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0) scaleY(0.9);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0) scaleY(3);
+  }
+}
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.split-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.split-slideshow .slideshow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  cursor: pointer;
+}
+.split-slideshow .slideshow-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.split-slideshow .slideshow-images .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.75, 0, 0.25, 1);
+  z-index: 2;
+}
+.split-slideshow .slideshow-images .item img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.split-slideshow .slideshow-images .item.active {
+  top: 0;
+  opacity: 1;
+}
+.split-slideshow .slideshow-left {
+  width: 50%;
+  overflow: hidden;
+}
+.split-slideshow .slideshow-left .item {
+  top: -100%;
+}
+.split-slideshow .slideshow-right {
+  left: 50%;
+  right: 0;
+  overflow: hidden;
+}
+.split-slideshow .slideshow-right .item {
+  top: 100%;
+  translate: -50% 0;
+}
+.split-slideshow .slideshow-text {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-larger);
+  font-weight: var(--font-weight-semibold);
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #666;
+  pointer-events: none;
+  line-height: 0.75;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.split-slideshow .slideshow-text .item {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.75, 0, 0.25, 1);
+}
+.split-slideshow .item.active {
+  opacity: 1;
+  top: 0;
+}
+.split-slideshow .item.move-down {
+  opacity: 1;
+  top: 100%;
+}
+.split-slideshow .item.move-up {
+  top: -100%;
+  opacity: 1;
+}
+
+.split-slideshow.animate {
+  animation-name: fadeOutUp;
+  animation-duration: 1s;
+}
+
+.bildraum-kontakt {
+  width: 100%;
+  color: var(--white);
+}
+.bildraum-kontakt .address {
   font-style: normal;
-  font-weight: normal;
   margin-bottom: 2rem;
 }
-footer .address .name {
+.bildraum-kontakt .address .name {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-semibold);
 }
-footer .address .line {
-  margin-bottom: 0.25rem;
-}
-footer .address .phone {
-  display: block;
-  color: var(--white);
+.bildraum-kontakt .address .phones {
   text-decoration: none;
-  margin-bottom: 0.25rem;
 }
-footer .address .email {
-  color: var(--primary);
-}
-footer .impressum {
+.bildraum-kontakt .address .phones a {
   display: block;
-  margin-top: 3.25rem;
+}
+.bildraum-kontakt .address .emails {
   color: var(--primary);
 }
-footer .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.bildraum-kontakt .address .emails a {
+  display: block;
 }
-footer .info .copyright {
-  font-size: var(--font-size-small);
-  margin-bottom: 0.5rem;
-}
-footer .info .author {
-  font-size: var(--font-size-small);
-  opacity: 0.5;
-}
-footer .info .author a {
-  color: var(--white);
+.bildraum-kontakt .impressum {
+  display: block;
+  color: var(--primary);
 }
 @media screen and (min-width: 640px) {
-  footer {
-    text-align: center;
-  }
-  footer .contact {
+  .bildraum-kontakt {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-end;
   }
-  footer .address {
+  .bildraum-kontakt .address {
     margin-bottom: 0;
-  }
-  footer .info {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-direction: row-reverse;
   }
 }
 

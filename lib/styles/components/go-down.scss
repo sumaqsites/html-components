@@ -1,0 +1,14 @@
+/* // Inspitarion: https://codepen.io/nxworld/pen/OyRrGy */
+.go-down {
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.8;
+  z-index: 10;
+  &:hover {
+    opacity: 1;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

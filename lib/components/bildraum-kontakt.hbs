@@ -1,0 +1,8 @@
+{{#exists bildraumKontakt data='bildraumKontakt'}}
+  <div class="bildraum-kontakt">
+    {{#each address }}
+      {{> @address address=. }}
+    {{/each}}
+    {{> @impressum }}
+  </div>
+{{/exists}}

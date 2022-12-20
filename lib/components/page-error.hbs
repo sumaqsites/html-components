@@ -1,0 +1,8 @@
+{{#exists errorPage data='errorPage'}}
+  <div class="page-error">
+    {{> @image--responsive }}
+    <h1>{{title}}</h1>
+    <p>{{text}}</p>
+    <a href="{{back.link}}">{{back.text}}</a>
+  </div>
+{{/exists }}

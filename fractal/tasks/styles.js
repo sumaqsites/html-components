@@ -5,6 +5,10 @@ const path = require('path')
 const fs = require('fs')
 // const fg = require('fast-glob')
 
+/**
+ * TODO: Compile all sass files from components folder into one file
+ */
+
 module.exports = async function (config) {
   // list all sass files from src folder
   // const componentsFiles = await fg(path.join(config.dir.components, '**/*.scss'))

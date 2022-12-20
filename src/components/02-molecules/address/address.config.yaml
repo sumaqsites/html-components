@@ -1,12 +1,13 @@
+status: ready
 context:
   address:
     name: 'John Doe'
-    street: Main Street 123
-    city: Anytown
-    state: ST
-    zip: 12345
-    country: EU
+    lines:
+      - Main Street 123
+      - Anytown, ST 12345
+      - Europe
     phones:
       - +123-456-7890
       - +123-456-7891
-    email: address@mail.com
+    emails:
+      - address@mail.com

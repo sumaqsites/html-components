@@ -1,10 +1,13 @@
 (() => {
-  // src/scripts/go-down.js
-  function initGoDown() {
-    const button = document.getElementById("go-down");
+  // src/components/01-atoms/go-down/go-down.js
+  var button = document.getElementById("go-down");
+  var initGoDown = () => {
     button.addEventListener("click", () => {
       window.scrollTo(0, document.body.offsetHeight);
     });
-  }
-  var go_down_default = initGoDown;
+  };
+  window.sumaqGoDown = {
+    button,
+    init: initGoDown
+  };
 })();

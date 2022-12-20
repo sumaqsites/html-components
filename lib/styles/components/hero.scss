@@ -1,0 +1,78 @@
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, $black, $gray);
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    padding: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    color: var(--white);
+
+    .title {
+      font-size: var(--font-size-larger);
+    }
+    // .pretitle {
+    //   font-size: 1.25em;
+    //   margin-bottom: 0.25rem;
+    // }
+    // .subtitle {
+    //   font-size: 1.25em;
+    //   margin-bottom: 0.25rem;
+    // }
+    // .typewriter {
+    //   font-size: 1.25em;
+    //   color: $primary;
+    // }
+    @include small-devices {
+      // justify-content: center;
+      // padding: 0 4rem;
+    }
+
+    // .social-networks {
+    //   font-size: 1em;
+    //   margin-top: 2rem;
+    //   a {
+    //     color: $gray-light;
+    //   }
+
+    //   @include small-devices {
+    //     // margin-top: 4rem;
+    //   }
+    // }
+  }
+
+  // flex-flow: column nowrap;
+
+  // @include small-devices {
+  //   justify-content: center;
+  //   padding-top: 0;
+  // }
+}

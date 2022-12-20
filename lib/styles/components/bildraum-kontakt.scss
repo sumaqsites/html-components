@@ -1,0 +1,41 @@
+.bildraum-kontakt {
+  width: 100%;
+  color: var(--white);
+
+  .address {
+    font-style: normal;
+    margin-bottom: 2rem;
+    .name {
+      font-size: var(--font-size-medium);
+      font-weight: var(--font-weight-semibold);
+    }
+    .lines {
+    }
+    .phones {
+      text-decoration: none;
+      a {
+        display: block;
+      }
+    }
+    .emails {
+      color: var(--primary);
+      a {
+        display: block;
+      }
+    }
+  }
+  .impressum {
+    display: block;
+    color: var(--primary);
+  }
+
+  @include small-devices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    .address {
+      margin-bottom: 0;
+    }
+  }
+}

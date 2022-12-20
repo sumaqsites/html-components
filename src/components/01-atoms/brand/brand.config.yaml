@@ -2,7 +2,7 @@ title: Brand
 status: ready
 context:
   brand:
-    url: '#'
+    link: '#'
     name: Lorem Ipsum
 variants:
   - name: default
@@ -10,11 +10,11 @@ variants:
       brand:
         logo:
           source: assets/sumaq-logo-svg
-          description: Lorem Impsum Logo
+          name: Lorem Impsum Logo
   - name: text
   - name: logo
     context:
       brand:
         logo:
           source: assets/sumaq-logo-svg
-          description: Lorem Impsum Logo
+          name: Lorem Impsum Logo

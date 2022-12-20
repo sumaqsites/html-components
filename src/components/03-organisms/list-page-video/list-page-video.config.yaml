@@ -1,0 +1,13 @@
+context:
+  listPageVideo:
+    items:
+      - title: Macchu Picchu 4k
+        video:
+          type: youtube
+          source: https://www.youtube.com/embed/AzcTJdt6FNs
+          name: Lorem ipsum video
+      - title: Micro CMS - In progress 2
+        video:
+          type: youtube
+          source: https://www.youtube.com/embed/Jg4lIas0mFc
+          name: Lorem ipsum image 2

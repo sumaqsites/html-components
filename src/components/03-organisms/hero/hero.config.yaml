@@ -1,0 +1,35 @@
+context:
+  hero:
+    title: Lorem Ipsum
+    image:
+      source: samples/bike
+      name: Image from cloudinary samples
+variants:
+  - name: default
+    label: Simple
+  - name: 'Extended'
+    context:
+      hero:
+        pretitle: "Hello, I'm"
+        title: Lorem Ipsum
+        subtitle: 'simple, minimalist y elegant!'
+        # typewriter:
+        #   text: this is a typewriter
+        image:
+          source: samples/bike
+          name: Image from cloudinary samples
+        # socialNetworks:
+        #   title: Social networks
+        #   items:
+        #     - name: demo@sumaqsites.com
+        #       link: 'mailto:demo@sumaqsites.com'
+        #       icon: icon-email
+        #       abbr: demo@sumaqsites.com
+        #     - name: Github
+        #       link: 'https://github.com/sumaqsites'
+        #       icon: icon-github
+        #       abbr: github
+        #     - name: Website
+        #       link: 'https://sumaqsites.com'
+        #       icon: icon-web
+        #       abbr: web

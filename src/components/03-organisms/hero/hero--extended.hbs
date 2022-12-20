@@ -1,0 +1,13 @@
+{{#exists hero data='hero'}}
+  <div class="hero">
+    {{#if image}} {{> @image--responsive}} {{/if}}
+    <div class="cover"></div>
+    <div class="content">
+      {{#if pretitle}}<p class="pretitle">{{ pretitle }}</p>{{/if}}
+      <h1 class="title">{{{ title }}}</h1>
+      {{#if subtitle}} <p class="subtitle">{{subtitle}}</p> {{/if}}
+      {{#if typewriter}} {{> @typewriter }} {{/if}}
+      {{#if socialNetworks}} {{> @social-networks }} {{/if}}
+    </div>
+  </div>
+{{/exists }}

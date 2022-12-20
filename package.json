@@ -26,6 +26,7 @@
     "build:fractal": "fractal build",
     "build:lib": "fractal build-lib",
     "build:list": "fractal list-components",
+    "compile:scripts": "fractal compile-scripts",
     "test": "gulp test"
   },
   "devDependencies": {

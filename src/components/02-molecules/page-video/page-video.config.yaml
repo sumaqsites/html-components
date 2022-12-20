@@ -1,0 +1,8 @@
+status: ready
+context:
+  pageVideo:
+    title: Macchu Picchu 4k
+    video:
+      type: youtube
+      source: https://www.youtube.com/embed/AzcTJdt6FNs
+      name: Lorem ipsum video

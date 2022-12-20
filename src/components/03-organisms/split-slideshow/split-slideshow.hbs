@@ -1,0 +1,25 @@
+{{#exists splitSlideshow data="splitSlideshow"}}
+  <div class="split-slideshow">
+    <div class="slideshow-overlay"></div>
+    <div class="slideshow-images">
+      {{#each items}}
+        <div class="item  {{#if @first}}active{{/if}}">
+          {{#exists image data="image"}}
+            <img
+              class="lazyload"
+              src="{{imageBlurred source}}"
+              data-srcset="{{imageSourceSet source}}"
+              data-sizes="auto"
+              alt="{{name}}"
+            />
+          {{/exists}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="slideshow-text">
+      {{#each items}}
+        <div class="item {{#if @first}}active{{/if}}">{{title}}</div>
+      {{/each}}
+    </div>
+  </div>
+{{/exists}}

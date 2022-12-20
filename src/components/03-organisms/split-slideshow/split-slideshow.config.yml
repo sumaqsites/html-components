@@ -1,0 +1,16 @@
+context:
+  splitSlideshow:
+    items:
+      - title: Image 1
+        image:
+          name: 'Placeholder image'
+          source: 'cld-sample.jpg'
+
+      - title: Image 2
+        image:
+          name: 'Placeholder image'
+          source: 'cld-sample-4.jpg'
+      - title: Image 3
+        image:
+          name: 'Placeholder image'
+          source: 'cld-sample-3.jpg'

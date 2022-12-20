@@ -1,0 +1,15 @@
+{{#exists video data="video"}}
+  <div class="video">
+    {{#if (isYoutube type)}}
+      <iframe src="{{ source }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {{else if (isVimeo type)}}
+      <iframe src="https://player.vimeo.com/video/773140243?h=ed06c64ba4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    {{else}}
+      <video controls="controls">
+        <source src="{{ source }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    {{/if}}
+  </video>
+{{/exists}}

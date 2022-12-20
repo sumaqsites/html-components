@@ -1,8 +1,11 @@
 {{#exists menu data="menu"}}
-  <ul class="menu" role="navigation">
+  <ul class="menu {{menuPosition position}}" role="navigation">
+    {{#if title}}
+      <li class="menu-title">{{title}}</li>
+    {{/if}}
     {{#each items}}
-      <li class="menu-item">
-        <a href="{{url}}" title="{{name}}">
+      <li class="menu-item {{#if isActive}}active{{/if}}">
+        <a href="{{link}}" title="{{name}}">
           <span>{{name}}</span>
         </a>
       </li>

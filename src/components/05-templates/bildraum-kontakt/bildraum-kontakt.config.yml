@@ -1,0 +1,24 @@
+context:
+  bildraumKontakt:
+    address:
+      - name: bildraum Wien
+        lines:
+          - Gurkgasse 43/2
+          - 1140 Wien
+        phones:
+          - +43 1 9236472
+          - +43 676 9487308
+        emails:
+          - bw@bildraum.at
+      - name: bildraum Graz
+        lines:
+          - Grabenstraße 11
+          - 8010 Graz
+        phones:
+          - +43 316 232230
+          - +43 664 2125820
+        emails:
+          - bg@bildraum.at
+    impressum:
+      name: Impressum
+      link: /impressum

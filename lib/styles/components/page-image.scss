@@ -4,20 +4,20 @@
   height: 100vh;
 
   h2 {
-    text-transform: uppercase;
-    height: 4rem;
+    height: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
+
   figure {
+    padding-top: 2rem;
     position: absolute;
-    top: 4rem;
+    top: 0rem;
     bottom: 0;
-    height: auto;
-    img {
-      width: 100%;
-      height: auto;
-    }
+    height: 100%;
+    // img {
+    //   width: 100%;
+    //   height: auto;
+    // }
   }
 }

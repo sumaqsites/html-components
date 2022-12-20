@@ -1,6 +1,6 @@
 {{#exists listPageImage  data="listPageImage"}}
-  {{#each items}}
-    {{> @page-image pageImage=.}}
+  {{#each items as |item|}}
+    {{> @page-image pageImage=item}}
   {{/each}}
 </section>
 {{/exists }}

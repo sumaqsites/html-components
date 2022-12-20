@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="{{ path '/styles/preview.css' }}" />
+    <style>
+      .go-down {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+      h1 {
+        margin: 0rem;
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container full-height">
+      <h1>Header</h1>
+      {{{yield}}}
+    </header>
+    <section class="container full-height">
+      <h1>Section</h1>
+    </section>
+    <script src="{{ path '/scripts/go-down.js' }}"></script>
+    <script>
+      initGoDown()
+    </script>
+  </body>
+</html>
