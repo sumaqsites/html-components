@@ -43,24 +43,24 @@ $breakpoint-wide: 1920px; // Extra large laptops and desktops
 
 @mixin small-devices {
 
-  @media screen and (min-width: var(--breakpoint-small)) {
+  @media screen and (min-width: #{$breakpoint-small}) {
     @content;
   }
 }
 
 @mixin small-devices-landscape {
-  @media screen and (min-width: var(--breakpoint-small)) and (orientation: landscape) {
+  @media screen and (min-width: #{$breakpoint-small}) and (orientation: landscape) {
     @content;
   }
 }
 
 @mixin medium-devices {
-  @media screen and (min-width: var(--breakpoint-medium)) {
+  @media screen and (min-width: #{$breakpoint-medium}) {
     @content;
   }
 }
 @mixin medium-devices-landscape {
-  @media screen and (min-width: var(--breakpoint-medium)) and (orientation: landscape) {
+  @media screen and (min-width: #{$breakpoint-medium}) and (orientation: landscape) {
     @content;
   }
 }

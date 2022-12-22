@@ -17,6 +17,7 @@
       previousIndex = currentIndex === 0 ? itemsLength - 1 : currentIndex - 1;
     }, autoStartSlideshow = function() {
       intervalSlideshow = setInterval(nextSlide, 2e3);
+      setTimeout(nextSlide, 250);
     };
     nextSlide2 = nextSlide, autoStartSlideshow2 = autoStartSlideshow;
     const overlay = document.querySelector(".slideshow-overlay");

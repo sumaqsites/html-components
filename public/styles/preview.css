@@ -630,7 +630,7 @@ html[data-theme=dark] {
   display: inline-block;
   padding: 1rem;
 }
-@media screen and (min-width: var(--breakpoint-small)) {
+@media screen and (min-width: 640px) {
   .menu.horizontal {
     flex-direction: row;
     align-items: flex-start;
@@ -747,7 +747,7 @@ html[data-theme=dark] {
   font-size: 1.75rem;
   text-align: center;
 }
-@media screen and (min-width: var(--breakpoint-small)) {
+@media screen and (min-width: 640px) {
   .coming-soon {
     padding: 0 10vw;
   }
@@ -957,7 +957,7 @@ html[data-theme=dark] {
   display: block;
   color: var(--primary);
 }
-@media screen and (min-width: var(--breakpoint-small)) {
+@media screen and (min-width: 640px) {
   .bildraum-kontakt {
     display: flex;
     flex-direction: row;
